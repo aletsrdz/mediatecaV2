@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * This is the model class for table "aprendiente2".
+ *
+ * The followings are the available columns in table 'aprendiente2':
+ * @property integer $idaprendiente
+ * @property string $fecharegistro
+ * @property string $fechainscripcion
+ * @property string $cta_rfc
+ * @property string $nombre
+ * @property integer $categoria
+ * @property integer $idioma
+ * @property integer $procedencia
+ * @property string $fechanacimiento
+ * @property string $sexo
+ * @property boolean $inscripcion
+ * @property integer $numinscripcion
+ */
+class Aprendiente2 extends CActiveRecord
+{
+	/*
+	private $idAprendiente;
+	private $fecharegistro;
+	private $fechainscripcion;
+	private $inscripcion;
+	private $numinscripcion;
+	*/
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'aprendiente2';
+	}
+
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('idaprendiente, cta_rfc', 'required'),
+			array('idaprendiente, categoria, idioma, procedencia, numinscripcion', 'numerical', 'integerOnly'=>true),
+			array('fecharegistro, fechainscripcion, nombre, fechanacimiento, sexo, inscripcion', 'safe'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('idaprendiente, fecharegistro, fechainscripcion, cta_rfc, nombre, categoria, idioma, procedencia, fechanacimiento, sexo, inscripcion, numinscripcion', 'safe', 'on'=>'search'),
+		);
+	}
+
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+		);
+	}
+
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'idaprendiente' => 'No',
+			'fecharegistro' => 'Fecha de Registro',
+			'fechainscripcion' => 'Fecha de Inscripción',
+			'cta_rfc' => 'Número de cuenta o RFC',
+			'nombre' => 'Nombre Completo',
+			'categoria' => 'Categoria',
+			'idioma' => 'Idioma',
+			'procedencia' => 'Procedencia',
+			'fechanacimiento' => 'Fecha de Nacimiento',
+			'sexo' => 'Genero',
+			'inscripcion' => 'Inscripción',
+			'numinscripcion' => 'No. Inscripción',
+		);
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('idaprendiente',$this->idaprendiente);
+		$criteria->compare('fecharegistro',$this->fecharegistro,true);
+		$criteria->compare('fechainscripcion',$this->fechainscripcion,true);
+		$criteria->compare('cta_rfc',$this->cta_rfc,true);
+		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('categoria',$this->categoria);
+		$criteria->compare('idioma',$this->idioma);
+		$criteria->compare('procedencia',$this->procedencia);
+		$criteria->compare('fechanacimiento',$this->fechanacimiento,true);
+		$criteria->compare('sexo',$this->sexo,true);
+		$criteria->compare('inscripcion',$this->inscripcion);
+		$criteria->compare('numinscripcion',$this->numinscripcion);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Aprendiente2 the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+	
+	public function getMenuDependencia()
+    {
+        $dependencia = Dependencia::model()->findAll();
+        return CHtml::listData($dependencia,"dependencia" ,"SelectDependencia");
+    }
+	
+	 public function getMenuSubdependencia($dependencia)
+    {
+        if($dependencia == null) $dependencia = 323;
+        $subdependencia = Subdependencia::model()->findAll('dependencia=?',array($dependencia));
+        return CHtml::listData($subdependencia,"subdep","SelectSubdependencia");
+        //return $this->subdep." ".$this->nomabrevia;    
+    }
+	
+	public function getLastAprendiente()
+	{
+//		$idAprendiente = Aprendiente2::model()->find
+	$idAprendiente = 98333039;
+	return $idaprendiente;
+		
+	}
+	
+}
