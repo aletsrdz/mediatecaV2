@@ -19769,3 +19769,388 @@ Stack trace:
 REQUEST_URI=/mediatecaV2/index.php/aprendiente2/create
 in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
 in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:04:36 [error] [php] Missing argument 3 for CHtml::listData(), called in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php on line 149 and defined (C:\xampp\htdocs\YiiPath\framework\web\helpers\CHtml.php:2271)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (149)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:19:08 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:152
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 14:19:31 [error] [php] Object of class Aprendiente2 could not be converted to string (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:153)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (153)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:24:31 [error] [php] Array to string conversion (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:153)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (153)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:34:26 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:34:42 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:37:24 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:40:05 [error] [php] Undefined index: idaprendiente (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:43:09 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:43:36 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:46:04 [error] [exception.ParseError] ParseError: syntax error, unexpected ',' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:149
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 14:46:19 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:46:41 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:151)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (151)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 14:48:43 [error] [php] Array to string conversion (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:158)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (158)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 15:07:33 [error] [php] Undefined index: idaprendiente (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:155)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (155)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 15:07:52 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:155)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (155)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 15:08:05 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ';' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:155
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 15:08:12 [error] [exception.ParseError] ParseError: syntax error, unexpected ''idaprendiente'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:155
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 15:10:26 [error] [exception.Error] Error: Unsupported operand types in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:152
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionCreate()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 15:11:52 [error] [exception.Error] Error: Unsupported operand types in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:152
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionCreate()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('create')
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 16:13:32 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:164
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 16:20:41 [error] [exception.ParseError] ParseError: syntax error, unexpected '$id' (T_VARIABLE) in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:156
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/23 16:21:55 [error] [php] Undefined variable: ultimo_id (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:160)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#1 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/create
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (160)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:23:02 [warning] [application] Failed to set unsafe attribute "categoria" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (175)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:23:02 [warning] [application] Failed to set unsafe attribute "idioma" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (175)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:23:02 [warning] [application] Failed to set unsafe attribute "procedencia" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (175)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:29:23 [warning] [application] Failed to set unsafe attribute "categoria" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:29:23 [warning] [application] Failed to set unsafe attribute "idioma" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:29:23 [warning] [application] Failed to set unsafe attribute "procedencia" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:26 [warning] [application] Failed to set unsafe attribute "categoria" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:26 [warning] [application] Failed to set unsafe attribute "idioma" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:26 [warning] [application] Failed to set unsafe attribute "procedencia" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:40 [warning] [application] Failed to set unsafe attribute "categoria" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:40 [warning] [application] Failed to set unsafe attribute "idioma" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:34:40 [warning] [application] Failed to set unsafe attribute "procedencia" of "Aprendiente2".
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (179)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/23 17:35:42 [error] [exception.ParseError] ParseError: syntax error, unexpected '*' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:177
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(276): CWebApplication->createController('create/')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#2 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---

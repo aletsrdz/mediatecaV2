@@ -18,7 +18,7 @@
  
 	<fieldset>
  
-		
+		<?php echo $form->labelEx($model,'persona_id'); ?>
  
 		<?php 
             /*

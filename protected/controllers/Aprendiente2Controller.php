@@ -114,8 +114,6 @@ class Aprendiente2Controller extends Controller
 		
 		$this->render('credencial',array("bruce"=>$bruce));
 		
-		  
-		
 	}
 	
 	public function actionSubdepByDep(){				
@@ -142,32 +140,43 @@ class Aprendiente2Controller extends Controller
 
 		if(isset($_POST['Aprendiente2']))
 		{
-			//$Criteria = new CDbCriteria();
-			//$Criteria -> select = 'MAX(idaprendiente)';
-			//$Criteria -> limit = 1;
-			//$Criteria -> order = "idaprendiente DESC";
-			$ultimo_id = CHtml::listData(Aprendiente2::model()->findAll(array('select'=>'MAX(idaprendiente)')), 'idaprendiente', 'nombre');    
- 			print_r($ultimo_id);
+			$Criteria = new CDbCriteria();
+			//$Criteria -> select = 'MAX(idaprendiente)'; // no funciona, no trae el numero máximo 
+			$Criteria -> limit = 1;
+			$Criteria -> order = "idaprendiente DESC";
+			//$ultimo_id = CHtml::listData(Aprendiente2::model()->findAll($Criteria), 'nombre', 'idaprendiente');    // para poder ver el resultado de SQL en pantalla 
+ 			//print_r($ultimo_id);
+						
+			foreach(Aprendiente2::model()->findAll($Criteria) as  $aprendiente => $record) { //Este es un ciclo para recuperar el resultado de la consulta, se recupera el dato de idAprendiente
+				$idaprendiente = $record->idaprendiente;
+			}
 			
-			//$ultimo_id = Aprendiente2::model()->find($Criteria);
+			//echo $idaprendiente."</br>";
+			//print_r ($id);
+			$idaprendiente=$idaprendiente+1; // Incrmento el valor de idaprendiente en UNO para insertar con el siguiente registro			
 			
-			echo '<pre>';
-			print_r($_POST);
-			echo '</pre>';
-			$model->idaprendiente = $ultimo_id;
+			echo $model->idaprendiente = $idaprendiente."<br>";
 			echo $model->fecharegistro = date("Y-m-d")."<br>";
 			echo $model->fechainscripcion = date("Y-m-d")."<br>";
+			echo $model->nombre = $_POST['Aprendiente2']['nombre']."<br>";
 			echo $model->cta_rfc = $_POST['Aprendiente2']['cta_rfc']."<br>";
 			echo $model->categoria = $_POST['Aprendiente2']['categoria']."<br>";
 			echo $model->idioma = $_POST['Aprendiente2']['idioma']."<br>";
 			echo $model->procedencia = $_POST['Aprendiente2']['procedencia']."<br>";
 			echo $model->fechanacimiento = $_POST['Aprendiente2']['fechanacimiento']."<br>";
 			echo $model->sexo = $_POST['Aprendiente2']['sexo']."<br>";
+			echo $model->inscripcion = 'TRUE'."<br>";
+			echo $model->numinscripcion = 1;
 			
-			Yii::app()->end();
-			
-			
-			$model->attributes=$_POST['Aprendiente2'];
+			// Este bloque me sirve para saber que se ha mandado por POST
+			/*
+			echo '<pre>';
+			print_r($_POST);
+			echo '</pre>';
+			Yii::app()->end(); // termino la aplicación para poder ver los resultados en pantalla 
+			*/
+
+			//$model->attributes=$_POST['Aprendiente2'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idaprendiente));
 		}

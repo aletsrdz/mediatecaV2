@@ -43,11 +43,11 @@ class Aprendiente2 extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('idaprendiente, cta_rfc', 'required'),
-			array('idaprendiente, categoria, idioma, procedencia, numinscripcion', 'numerical', 'integerOnly'=>true),
+			array('idaprendiente, numinscripcion', 'numerical', 'integerOnly'=>true),
 			array('fecharegistro, fechainscripcion, nombre, fechanacimiento, sexo, inscripcion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idaprendiente, fecharegistro, fechainscripcion, cta_rfc, nombre, categoria, idioma, procedencia, fechanacimiento, sexo, inscripcion, numinscripcion', 'safe', 'on'=>'search'),
+			array('cta_rfc, nombre, categoria, idioma, procedencia, fechanacimiento, sexo', 'safe', 'on'=>'search'),
 		);
 	}
 
