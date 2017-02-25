@@ -155,18 +155,18 @@ class Aprendiente2Controller extends Controller
 			//print_r ($id);
 			$idaprendiente=$idaprendiente+1; // Incrmento el valor de idaprendiente en UNO para insertar con el siguiente registro			
 			
-			echo $model->idaprendiente = $idaprendiente."<br>";
-			echo $model->fecharegistro = date("Y-m-d")."<br>";
-			echo $model->fechainscripcion = date("Y-m-d")."<br>";
-			echo $model->nombre = $_POST['Aprendiente2']['nombre']."<br>";
-			echo $model->cta_rfc = $_POST['Aprendiente2']['cta_rfc']."<br>";
-			echo $model->categoria = $_POST['Aprendiente2']['categoria']."<br>";
-			echo $model->idioma = $_POST['Aprendiente2']['idioma']."<br>";
-			echo $model->procedencia = $_POST['Aprendiente2']['procedencia']."<br>";
-			echo $model->fechanacimiento = $_POST['Aprendiente2']['fechanacimiento']."<br>";
-			echo $model->sexo = $_POST['Aprendiente2']['sexo']."<br>";
-			echo $model->inscripcion = 'TRUE'."<br>";
-			echo $model->numinscripcion = 1;
+			$model->idaprendiente = $idaprendiente;
+			$model->fecharegistro = date("Y-m-d");
+			$model->fechainscripcion = date("Y-m-d");
+			$model->nombre = $_POST['Aprendiente2']['nombre'];
+			$model->cta_rfc = $_POST['Aprendiente2']['cta_rfc'];
+			$model->categoria = $_POST['Aprendiente2']['categoria'];
+			$model->idioma = $_POST['Aprendiente2']['idioma'];
+			$model->procedencia = $_POST['Aprendiente2']['procedencia'];
+			$model->fechanacimiento = $_POST['Aprendiente2']['fechanacimiento'];
+			$model->sexo = $_POST['Aprendiente2']['sexo'];
+			$model->inscripcion = 'TRUE';
+			$model->numinscripcion = '1';
 			
 			// Este bloque me sirve para saber que se ha mandado por POST
 			/*

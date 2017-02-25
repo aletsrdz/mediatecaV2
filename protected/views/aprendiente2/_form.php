@@ -18,7 +18,7 @@
  
 	<fieldset>
  
-		<?php echo $form->labelEx($model,'persona_id'); ?>
+		<?php #echo $form->labelEx($model,'persona_id'); ?>
  
 		<?php 
             /*
@@ -74,7 +74,8 @@
                     'wrapperHtmlOptions' => array('class' => 'col-sm-5'),                    
                 )
             ); 				
-
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "idcategoria ASC";
 			
 			echo $form->dropDownListGroup(
                 $model,
@@ -84,7 +85,7 @@
 					'class' => 'col-sm-5',
 				),
 	   			'widgetOptions' => array(
-					'data' => CHtml::listData(Categoria::model()->findAll(),"idcategoria" ,"SelectCategoria"),
+					'data' => CHtml::listData(Categoria::model()->findAll($Criteria),"idcategoria" ,"SelectCategoria"),
 	   				//'data' => array('Estudiante', 'Académico', 'Administrativo', 'Tesista', 'Trabajador de confianza', 'otro'),
 					'htmlOptions' => array(
 						'empty'=>'Seleccione Categoria',
@@ -94,7 +95,8 @@
 			)
             ); 
 			
-			
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "ididioma ASC";
 			echo $form->dropDownListGroup(
                 $model,
                 'idioma',
@@ -104,7 +106,7 @@
 				),
 	   			'widgetOptions' => array(
 				
-					'data' => CHtml::listData(Idioma::model()->findAll(),"ididioma" ,"SelectIdioma"),	   				
+					'data' => CHtml::listData(Idioma::model()->findAll($Criteria),"ididioma" ,"SelectIdioma"),	   				
 					'htmlOptions' => array(
 						'empty'=>'Seleccione Idioma',
 						//'multiple' => true
@@ -113,7 +115,8 @@
 			)
             ); 
 			
-
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "dependencia ASC";
 			echo $form->dropDownListGroup(
                 $model,
                 'procedencia',
@@ -123,10 +126,10 @@
 				),
 	   			'widgetOptions' => array(
 					
-					'data' => CHtml::listData(Dependencia::model()->findAll(),"dependencia" ,"SelectDependencia"),
+					'data' => CHtml::listData(Dependencia::model()->findAll($Criteria),"dependencia" ,"SelectDependencia"),
 	   				//'data' => array('Estudiante', 'Académico', 'Administrativo', 'Tesista', 'Trabajador de confianza', 'otro'),
 					'htmlOptions' => array(
-						'empty'=>'Seleccione Procedencia',
+						'empty'=>'Seleccione Dependencia UNAM',
 						//'multiple' => true
 					),
 				)
