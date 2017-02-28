@@ -1,6 +1,6 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="container">
-	<div class="span-6">
+	<div class="span-4">
 		
 			<h2></h2>
 			<?php        
@@ -41,7 +41,7 @@
 		
 
 	</div>
-	<div id="content" class="span-21">
+	<div id="content" class="span-24"> <!-- Para cambiar el tamaño del contenido en la pantalla  -->
 		<?php echo $content; ?>
 	</div><!-- content -->
 </div>

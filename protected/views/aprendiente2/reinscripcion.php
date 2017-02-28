@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Aprendiente2 <?php echo $model->idaprendiente; ?></h1>
+<h1>Reinscripción Aprendiente No. <?php echo $model->idaprendiente; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_formR', array('model'=>$model)); ?>

@@ -29,17 +29,17 @@ class Aprendiente2Controller extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','generarCredencial'),
+				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial'),
 				#'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','generarCredencial'),
+				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial'),
 				#'users'=>array('@'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','generarCredencial'),
+				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial'),
 				#'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -56,6 +56,13 @@ class Aprendiente2Controller extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+		public function actionCredencial($id)
+	{
+		$this->render('credencial',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -185,6 +192,27 @@ class Aprendiente2Controller extends Controller
 			'model'=>$model,
 		));
 	}
+
+	
+	public function actionReinscripcion($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Aprendiente2']))
+		{
+			$model->attributes=$_POST['Aprendiente2'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idaprendiente));
+		}
+
+		$this->render('reinscripcion',array(
+			'model'=>$model,
+		));
+	}
+	
 
 	/**
 	 * Updates a particular model.

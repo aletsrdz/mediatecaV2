@@ -100,7 +100,7 @@ class Aprendiente2 extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		$sort = new CSort();
 		$criteria->compare('idaprendiente',$this->idaprendiente);
 		$criteria->compare('fecharegistro',$this->fecharegistro,true);
 		$criteria->compare('fechainscripcion',$this->fechainscripcion,true);
@@ -113,9 +113,22 @@ class Aprendiente2 extends CActiveRecord
 		$criteria->compare('sexo',$this->sexo,true);
 		$criteria->compare('inscripcion',$this->inscripcion);
 		$criteria->compare('numinscripcion',$this->numinscripcion);
-
+		/*
+		$sort->attributes = array(
+    		'idaprendiente'=>array(
+    			'asc'=>'idaprendiente',
+    			'desc'=>'idaprendiente DESC',
+        		
+        		)
+    	);
+		*/
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			#'sort'=>$sort,
+			'sort'=>array(
+                        'defaultOrder'=>'idaprendiente DESC',
+                    ),
+			'pagination'=>array('pageSize'=>15)
 		));
 	}
 

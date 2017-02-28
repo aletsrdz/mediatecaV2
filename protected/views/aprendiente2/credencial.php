@@ -17,7 +17,7 @@ $this->menu=array(
 ?>
 
 
-<h1>Detalle del Aprendiente: <?php echo $model->idaprendiente; ?></h1>
+<h2>Generar credencial para el  No. Aprendiente: <?php echo $model->idaprendiente; ?></h2>
 
 <?php 
 $idioma = CHtml::encode($model->idioma);
@@ -95,5 +95,5 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 
 <br>
-<?php #echo CHtml::link('Código de barras - PDF', array('generarCredencial', "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente), array('target'=>'_blank'));?>
+<?php echo CHtml::link('Código de barras - PDF', array('generarCredencial', "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente), array('target'=>'_blank'));?>
 </br>

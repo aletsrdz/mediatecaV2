@@ -44,24 +44,66 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'aprendiente2-grid',
 	'dataProvider'=>$model->search(),
+	'summaryText' => 'Mostrar {start} - {end} de {count}',
+	'pager' => array('class' => 'CLinkPager', 'header' => 'Ir a página:', 'nextPageLabel'=>"Siguiente", 'prevPageLabel'=>'Anterior'),
 	'filter'=>$model,
 	'columns'=>array(
-		'idaprendiente',
-		'fecharegistro',
-		'fechainscripcion',
-		'cta_rfc',
-		'nombre',
-		'categoria',
-		/*
-		'idioma',
-		'procedencia',
-		'fechanacimiento',
-		'sexo',
-		'inscripcion',
-		'numinscripcion',
-		*/
+		array(
+            'name'=>'idaprendiente',
+            'header'=>'No.',
+            'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
+        ),
+        array(
+            'name'=>'fechainscripcion',
+            'header'=>'Fecha de Inscripción',
+            'htmlOptions'=>array('style'=>'width: 30px; text-align: center;'),            
+        ),
+        array(
+            'name'=>'cta_rfc',
+            'header'=>'Número de Cuenta / RFC',
+            'htmlOptions'=>array('style'=>'width: 50px; text-align: center;'),            
+        ),        
+        array(
+            'name'=>'nombre',
+            'header'=>'Nombre Completo',
+            'htmlOptions'=>array('style'=>'width: 150px; text-align: left;'),            
+        ),        
+
+        
+		#'idaprendiente',
+		#'fecharegistro',
+		#'fechainscripcion',
+		#'cta_rfc',
+		#'nombre',
+		#'categoria',		
+		#'idioma',
+		#'procedencia',
+		#'fechanacimiento',
+		#'sexo',
+		#'inscripcion',
+		#'numinscripcion',
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{view}{update}{delete}{cred}{reins}',
+			'buttons'=>array(
+					'htmlOptions'=>array('style' => 'padding-left:10px;'),
+					'cred'=>array(
+						'label'=>'Credencial',
+						'url'=>'Yii::app()->createUrl("aprendiente2/credencial", array("id" => $data->primaryKey))',
+						'imageUrl'=>Yii::app()->request->baseUrl.'/images/credencial.png',
+						'options'=>array('class'=>'cred'),											
+					 ),						
+					'reins'=>array(
+						'label'=>'Reinscripción',
+						'url'=>'Yii::app()->createUrl("aprendiente2/reinscripcion", array("id" => $data->primaryKey))',
+						'imageUrl'=>Yii::app()->request->baseUrl.'/images/reins.jpg',
+						'options'=>array('class'=>'reins'),
+					 ),
+			),
+			'htmlOptions'=>array('style' => 'width: 100px; text-align: center', 'img'=>'padding-left:10px'),
+			'header'=>'Acciones',
+
 		),
-	),
+
+	),//cierre de columns
 )); ?>

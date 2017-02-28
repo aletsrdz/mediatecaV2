@@ -20927,3 +20927,1635 @@ REQUEST_URI=/index.php/aprendiente2/270686
 in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (32)
 in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
 in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 10:31:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/270686
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (30)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 10:33:10 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/270686
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (30)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 10:53:40 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:35
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 10:53:42 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:35
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 10:53:54 [error] [exception.Error] Error: Call to undefined function integer() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:35
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 10:54:15 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:37
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 11:00:24 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 11:00:25 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#5 [internal function]: Aprendiente2Controller->actionView('270686')
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#17 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#18 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 11:02:39 [error] [exception.ParseError] ParseError: syntax error, unexpected '}', expecting end of file in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:48
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#4 [internal function]: Aprendiente2Controller->actionView('270686')
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#17 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php/aprendiente2/270686
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 11:18:13 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/270686?nombre=Prueba1+PaternoPrueba+MaternoPrueba&idioma=1
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:30:14 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/270686?nombre=Prueba1+PaternoPrueba+MaternoPrueba&idioma=Ingl%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:32:34 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/270687?nombre=Prueba2+Paterno2+Materno2&idioma=Franc%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:34:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221064
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (58)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:34:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:58)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (58)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:36:55 [error] [exception.CException] CException: Property "Categoria.nomabrevia" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nomabrevia')
+#1 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php(42): CActiveRecord->__get('nomabrevia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): CController->render('view', Array)
+#7 [internal function]: Aprendiente2Controller->actionView('221060')
+#8 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Aprendiente2Controller), Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Aprendiente2Controller), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/vi...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/221060
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/27 11:37:47 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:38:31 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:39:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:39:06 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:39:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:39:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:40:19 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/221060?nombre=GOMEZ+TREJO+EMILSE+SELENE&idioma=Japon%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:42:17 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:46:36 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:50:55 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 11:50:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 12:20:22 [error] [php] Creating default object from empty value (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (42)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 12:20:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(59): Aprendiente2Controller->render()
+#3 unknown(0): Aprendiente2Controller->actionView()
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/221060
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\view.php (43)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (59)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 12:28:18 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/221060?nombre=GOMEZ+TREJO+EMILSE+SELENE&idioma=Japon%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 12:31:17 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/270687
+---
+2017/02/27 12:31:21 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "aprendiente2". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ap...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/270687
+---
+2017/02/27 12:32:13 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/221061?nombre=CORDOVA+MARTINEZ+JESUS+ANTONIO&idioma=Franc%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (115)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/27 13:14:09 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:14:19 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "aprendiente2". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ap...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/aprendiente2/create
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:14:24 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "credencial". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('credencial')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('credencial')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/credencial/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:14:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "aprendiente2". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ap...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:14:48 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:15:18 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:17:36 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:17:43 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "aprendiente2". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ap...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:17:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "credencial". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('credencial')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('credencial')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/credencial/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221058
+---
+2017/02/27 13:18:54 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "credencial". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('credencial')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('credencial')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/cr...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/credencial/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221063
+---
+2017/02/27 13:19:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221063
+---
+2017/02/27 13:25:59 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/update/221067
+---
+2017/02/27 17:33:03 [error] [exception.CException] CException: Property "CButtonColumn.reinscripcionButtonLabel" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CButtonColumn.php(239): CComponent->__get('reinscripcionBu...')
+#1 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CButtonColumn.php(194): CButtonColumn->initDefaultButtons()
+#2 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(401): CButtonColumn->init()
+#3 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(147): CGridView->init()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(45): CBaseController->widget('zii.widgets.gri...', Array)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#11 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(270): CController->render('admin', Array)
+#12 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#22 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#23 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/create
+---
+2017/02/28 10:53:31 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/_formR.php/id/221058". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/_formR.php/id/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 10:56:47 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/_formR.php/id/221058". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/_formR.php/id/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 10:58:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 10:59:42 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:01:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:04:10 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:04:21 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:09:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "id". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('id')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('id')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('reinscripcion/i...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/reinscripcion/id/270687
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:11:50 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\YiiPath\framework\web\CUrlManager.php:286)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\base\CComponent.php(612): eval()
+#1 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CButtonColumn.php(343): CButtonColumn->evaluateExpression()
+#2 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CButtonColumn.php(322): CButtonColumn->renderButton()
+#3 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridColumn.php(231): CButtonColumn->getDataCellContent()
+#4 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridColumn.php(154): CButtonColumn->renderDataCellContent()
+#5 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(638): CButtonColumn->renderDataCell()
+#6 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell()
+#7 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow()
+#8 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#9 C:\xampp\htdocs\YiiPath\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#10 unknown(0): CGridView->renderSection()
+#11 C:\xampp\htdocs\YiiPath\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#12 C:\xampp\htdocs\YiiPath\framework\zii\widgets\CBaseListView.php(149): CGridView->renderContent()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(181): CGridView->run()
+#14 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(45): Aprendiente2Controller->widget()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require()
+#16 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): Aprendiente2Controller->renderInternal()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): Aprendiente2Controller->renderFile()
+#18 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): Aprendiente2Controller->renderPartial()
+#19 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(270): Aprendiente2Controller->render()
+#20 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#21 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#22 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#23 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#25 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#26 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#27 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#29 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#30 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#31 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/admin
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php (45)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (270)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/28 11:13:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Aprendiente2Controller/reinscripcion". in C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('Aprendiente2Con...')
+#1 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/Aprendiente2Controller/reinscripcion/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:14:09 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "id". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('id')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('id')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('reinscripcion/i...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/reinscripcion/id/221058
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/admin
+---
+2017/02/28 11:14:15 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "view". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('reinscripcion/v...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/reinscripcion/221058
+---
+2017/02/28 13:27:54 [error] [exception.ParseError] ParseError: syntax error, unexpected '=', expecting ')' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php:79
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#15 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:36:21 [error] [exception.ParseError] ParseError: syntax error, unexpected ''htmlOptions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php:52
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#15 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:36:47 [error] [exception.ParseError] ParseError: syntax error, unexpected ''htmlOptions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php:52
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#15 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:38:41 [error] [exception.ParseError] ParseError: syntax error, unexpected ''htmlOptions'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php:52
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#5 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#14 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#15 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:43:25 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:44:02 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:44:06 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:44:07 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:45:48 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:47:25 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:47:27 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:47:28 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(101): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:49:49 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', 'fechainscripcio...')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(80): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:49:52 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', 'fechainscripcio...')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(80): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:51:15 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', 'fechainscripcio...')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(80): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:51:22 [error] [exception.CException] CException: Property "CGridView.0" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('0', 'fechainscripcio...')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(80): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 13:56:57 [error] [exception.CException] CException: Property "CDataColumn.style" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\YiiBase.php(220): CComponent->__set('style', 'width: 30px;')
+#1 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\YiiPath\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(45): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#10 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#12 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#22 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 14:21:22 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/270687?nombre=Prueba2+Paterno2+Materno2&idioma=Franc%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (122)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/28 14:21:41 [error] [php] Undefined variable: bruce (C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): Aprendiente2Controller->runAction()
+#3 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): Aprendiente2Controller->filterAccessControl()
+#6 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): Aprendiente2Controller->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): Aprendiente2Controller->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/aprendiente2/generarCredencial/270687?nombre=Prueba2+Paterno2+Materno2&idioma=Franc%C3%A9s
+in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php (122)
+in C:\xampp\htdocs\YiiPath\mediatecaV2\index.php (13)
+2017/02/28 14:21:49 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "asistencia". in C:\xampp\htdocs\YiiPath\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CController.php(270): CController->missingAction('asistencia')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('asistencia')
+#2 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/as...')
+#3 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/aprendiente2/asistencia/index
+HTTP_REFERER=http://localhost:8000/index.php/aprendiente2/credencial/270687
+---
+2017/02/28 16:38:18 [error] [exception.CException] CException: Property "CGridView.summary" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('summary', 'hola')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 16:40:29 [error] [exception.CException] CException: Property "CGridView.summary" is not defined. in C:\xampp\htdocs\YiiPath\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\YiiPath\framework\web\CWidgetFactory.php(161): CComponent->__set('summary', 'hola')
+#1 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(Aprendiente2Controller), 'CGridView', Array)
+#2 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\views\aprendiente2\admin.php(104): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\YiiPath\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\YiiPath\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(277): CController->render('admin', Array)
+#9 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#20 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 17:10:34 [error] [exception.ParseError] ParseError: syntax error, unexpected ',' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\models\Aprendiente2.php:121
+Stack trace:
+#0 [internal function]: YiiBase::autoload('Aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(271): spl_autoload_call('Aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#12 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#13 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
+2017/02/28 17:12:18 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\YiiPath\mediatecaV2\protected\models\Aprendiente2.php:121
+Stack trace:
+#0 [internal function]: YiiBase::autoload('Aprendiente2')
+#1 C:\xampp\htdocs\YiiPath\mediatecaV2\protected\controllers\Aprendiente2Controller.php(271): spl_autoload_call('Aprendiente2')
+#2 C:\xampp\htdocs\YiiPath\framework\web\actions\CInlineAction.php(49): Aprendiente2Controller->actionAdmin()
+#3 C:\xampp\htdocs\YiiPath\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\YiiPath\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\YiiPath\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\YiiPath\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\YiiPath\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\YiiPath\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(282): CController->run('admin')
+#12 C:\xampp\htdocs\YiiPath\framework\web\CWebApplication.php(141): CWebApplication->runController('aprendiente2/ad...')
+#13 C:\xampp\htdocs\YiiPath\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\YiiPath\mediatecaV2\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/aprendiente2/admin
+HTTP_REFERER=http://localhost:8000/index.php/credencial/index
+---
