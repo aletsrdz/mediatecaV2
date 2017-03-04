@@ -3,7 +3,7 @@
 /* @var $model Aprendiente2 */
 
 $this->breadcrumbs=array(
-	'Aprendiente'=>array('index'),
+	'Consulta'=>array('admin'),
 	$model->idaprendiente,
 );
 
@@ -14,6 +14,11 @@ $this->menu=array(
 	array('label'=>'Delete Aprendiente2', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idaprendiente),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Aprendiente2', 'url'=>array('admin')),
 );
+?>
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
 ?>
 
 

@@ -200,12 +200,18 @@
         ?>
    
 	<div class="form-actions">
+		
+
+
+
+
 		<?php $this->widget(
 			'booster.widgets.TbButton',
 			array(
 				'buttonType' => 'submit',
 				'context' => 'primary',
-				'label' => 'Reinscribir'
+				'label' => 'Reinscribir',
+				
 			)
 		); ?>
 		

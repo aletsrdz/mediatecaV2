@@ -19,13 +19,9 @@
  */
 class Aprendiente2 extends CActiveRecord
 {
-	/*
-	private $idAprendiente;
-	private $fecharegistro;
-	private $fechainscripcion;
-	private $inscripcion;
-	private $numinscripcion;
-	*/
+	public $idioma_search;
+	
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -47,7 +43,7 @@ class Aprendiente2 extends CActiveRecord
 			array('fecharegistro, fechainscripcion, nombre, fechanacimiento, sexo, inscripcion', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('cta_rfc, nombre, categoria, idioma, procedencia, fechanacimiento, sexo', 'safe', 'on'=>'search'),
+			array('cta_rfc, nombre, categoria, idioma, procedencia, fechanacimiento, sexo, idioma_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +55,8 @@ class Aprendiente2 extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'inscripcion' => array(self::HAS_ONE, 'Inscripcion', 'idaprendiente'),
+			'idiomas' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
 		);
 	}
 
@@ -80,6 +78,7 @@ class Aprendiente2 extends CActiveRecord
 			'sexo' => 'Genero',
 			'inscripcion' => 'Inscripción',
 			'numinscripcion' => 'No. Inscripción',
+			'idioma_search'=>'Idioma',
 		);
 	}
 
@@ -101,13 +100,16 @@ class Aprendiente2 extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		$sort = new CSort();
+		$criteria->with = array('idiomas');
+		#$criteria->addCondition('inscripcion=true');
 		$criteria->compare('idaprendiente',$this->idaprendiente);
 		$criteria->compare('fecharegistro',$this->fecharegistro,true);
 		$criteria->compare('fechainscripcion',$this->fechainscripcion,true);
 		$criteria->compare('cta_rfc',$this->cta_rfc,true);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('categoria',$this->categoria);
-		$criteria->compare('idioma',$this->idioma);
+		#$criteria->compare('idioma',$this->idioma);
+		$criteria->compare('idiomas.nombre',$this->idioma_search,true);
 		$criteria->compare('procedencia',$this->procedencia);
 		$criteria->compare('fechanacimiento',$this->fechanacimiento,true);
 		$criteria->compare('sexo',$this->sexo,true);
@@ -126,9 +128,16 @@ class Aprendiente2 extends CActiveRecord
 			'criteria'=>$criteria,
 			#'sort'=>$sort,
 			'sort'=>array(
-                        'defaultOrder'=>'idaprendiente DESC',
+						'attributes'=>array(
+							'idioma_search'=>array(
+							'asc'=>'idiomas.nombre ASC',
+							'desc'=>'idiomas.nombre DESC',
+							),
+						),
+                        'defaultOrder'=>'idaprendiente DESC',						
                     ),
-			'pagination'=>array('pageSize'=>15)
+			'pagination'=>array('pageSize'=>15),
+
 		));
 	}
 

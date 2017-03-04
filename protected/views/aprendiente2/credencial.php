@@ -3,7 +3,7 @@
 /* @var $model Aprendiente2 */
 
 $this->breadcrumbs=array(
-	'Aprendiente'=>array('index'),
+	'Aprendiente'=>array('admin'),
 	$model->idaprendiente,
 );
 
@@ -97,3 +97,19 @@ $this->widget('zii.widgets.CDetailView', array(
 <br>
 <?php echo CHtml::link('Código de barras - PDF', array('generarCredencial', "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente), array('target'=>'_blank'));?>
 </br>
+<?php $this->widget(
+    'booster.widgets.TbButton',
+    array(
+    	'buttonType' =>'link',
+        'label' => 'Reinscripción',
+        'context' => 'primary',
+        #'url' => 'array(generarCredencial, "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente),',
+        'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', array("nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente)),
+        'htmlOptions' => array(
+        	#'linkOptions' => array('target'=>'_blank'),
+        	'onclick' => 'js:bootbox.alert("Generar credencial!")',        	
+        )	
+
+    )
+); echo ' ';
+?>

@@ -10,7 +10,7 @@
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
-
+<!--
 	<div class="row">
 		<?php echo $form->label($model,'idaprendiente'); ?>
 		<?php echo $form->textField($model,'idaprendiente'); ?>
@@ -60,19 +60,23 @@
 		<?php echo $form->label($model,'sexo'); ?>
 		<?php echo $form->textField($model,'sexo'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'inscripcion'); ?>
-		<?php echo $form->checkBox($model,'inscripcion'); ?>
-	</div>
-
 	<div class="row">
 		<?php echo $form->label($model,'numinscripcion'); ?>
 		<?php echo $form->textField($model,'numinscripcion'); ?>
 	</div>
 
+
+-->
+
+	<div class="row">
+		<?php #echo $form->label($model,'Inscritos'); ?>
+		<?php echo $form->radioButtonList($model,'inscripcion', array('True'=> 'Inscritos', 'False'=>'No inscritos', ''=>'Mostrar todos')); ?>
+
+	</div>
+
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Ver'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

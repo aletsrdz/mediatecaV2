@@ -7,7 +7,9 @@ class Aprendiente2Controller extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	#public $layout='//layouts/column2'; // layout por default
-	public $layout='//layouts/lefty';	
+	public $layout='//layouts/lefty';
+
+
 
 	/**
 	 * @return array action filters
@@ -16,10 +18,11 @@ class Aprendiente2Controller extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			'postOnly + delete', // we only allow deletion via POST request	
 		);
 	}
 
+	
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -196,15 +199,49 @@ class Aprendiente2Controller extends Controller
 	
 	public function actionReinscripcion($id)
 	{
+		
+
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		$model->fechainscripcion = date('Y-m-j');
+		$nuevafecha = strtotime ( '+6 month' , strtotime ( $model->fechainscripcion ) ) ;
+		$nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+ 
+		#echo $nuevafecha;
+		$numinsc=$model->numinscripcion+1;
+
 
 		if(isset($_POST['Aprendiente2']))
 		{
-			$model->attributes=$_POST['Aprendiente2'];
+			#$model->attributes=$_POST['Aprendiente2'];
+			$model->idaprendiente;
+			$model->fecharegistro = date("Y-m-d");
+			$model->fechainscripcion = $nuevafecha;
+			$model->nombre = $_POST['Aprendiente2']['nombre'];
+			$model->cta_rfc = $_POST['Aprendiente2']['cta_rfc'];
+			$model->categoria = $_POST['Aprendiente2']['categoria'];
+			$model->idioma = $_POST['Aprendiente2']['idioma'];
+			$model->procedencia;
+			$model->fechanacimiento;
+			$model->sexo;
+			$model->inscripcion = 'TRUE';
+			$model->numinscripcion = $numinsc;
+
+			/*
+			echo '<pre>';
+			print_r($model);
+			echo '</pre>';
+			Yii::app()->end();
+			*/
 			if($model->save())
+				$user = Yii::app()->getComponent('user');
+				$user->setFlash(
+    			'success',
+    			"El Aprendiente se ha <strong>reinscrito!</strong>."
+				);
+				#Yii::app()->user->setFlash('success', "El Aprendiente se ha reinscrito!");				
 				$this->redirect(array('view','id'=>$model->idaprendiente));
 		}
 
@@ -292,6 +329,10 @@ class Aprendiente2Controller extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+
+
+
+
 
 	/**
 	 * Performs the AJAX validation.

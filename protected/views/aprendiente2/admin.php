@@ -3,8 +3,8 @@
 /* @var $model Aprendiente2 */
 
 $this->breadcrumbs=array(
-	'Aprendiente2s'=>array('index'),
-	'Manage',
+	'Aprendiente'=>array('admin'),
+	'Consulta',
 );
 
 $this->menu=array(
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administrar Aprendientes</h1>
+<h1>Consultar Aprendientes</h1>
 <!--
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -34,16 +34,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </p>
 -->
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Búsqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+	
+	
+	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'aprendiente2-grid',
 	'dataProvider'=>$model->search(),
+	'emptyText' => 'NO SE ENCONTRARÓN RESULTADOS',
 	'summaryText' => 'Mostrar {start} - {end} de {count}',
 	'pager' => array('class' => 'CLinkPager', 'header' => 'Ir a página:', 'nextPageLabel'=>"Siguiente", 'prevPageLabel'=>'Anterior'),
 	'filter'=>$model,
@@ -67,7 +71,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
             'name'=>'nombre',
             'header'=>'Nombre Completo',
             'htmlOptions'=>array('style'=>'width: 150px; text-align: left;'),            
+        ),
+               
+        array(
+            'name'=>'idioma_search',
+            'header'=>'Idioma',
+            'value' => '$data->idiomas->nombre',                 
+            'htmlOptions'=>array('style'=>'width: 30px; text-align: center;'),            
         ),        
+
 
         
 		#'idaprendiente',
@@ -86,7 +98,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 			'class'=>'CButtonColumn',
 			'template'=>'{view}{update}{delete}{cred}{reins}',
 			'buttons'=>array(
-					'htmlOptions'=>array('style' => 'padding-left:10px;'),
+					'htmlOptions'=>array('style' => ' margin-left: 2px'),
 					'cred'=>array(
 						'label'=>'Credencial',
 						'url'=>'Yii::app()->createUrl("aprendiente2/credencial", array("id" => $data->primaryKey))',
@@ -94,13 +106,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 						'options'=>array('class'=>'cred'),											
 					 ),						
 					'reins'=>array(
+						'visible'=>'($data->inscripcion == "t") ? false : true',
 						'label'=>'Reinscripción',
 						'url'=>'Yii::app()->createUrl("aprendiente2/reinscripcion", array("id" => $data->primaryKey))',
 						'imageUrl'=>Yii::app()->request->baseUrl.'/images/reins.jpg',
 						'options'=>array('class'=>'reins'),
 					 ),
 			),
-			'htmlOptions'=>array('style' => 'width: 100px; text-align: center', 'img'=>'padding-left:10px'),
+			'htmlOptions'=>array('style' => 'width: 100px; text-align: center; margin-left: 2px;'),
 			'header'=>'Acciones',
 
 		),

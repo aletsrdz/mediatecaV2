@@ -19,14 +19,14 @@
                              ),
                         '',
                         array(
-                            'label' => 'Acceso', 'visible'=>Yii::app()->user->checkAccess("asist"),
+                            'label' => 'Aprendientes', 'visible'=>Yii::app()->user->checkAccess("asist"),
                             'itemOptions' => array('class' => 'nav-header')
                         ),
                         '',                        
                         array('label' => 'Asistencia', 'url' => '../asistencia/index',  'visible'=>Yii::app()->user->checkAccess("asist")),
                         array('label' => 'Inscripción', 'url' => '../aprendiente2/create',  'visible'=>Yii::app()->user->checkAccess("asist")),
-                        array('label' => 'ReInscripción', 'url' => '../credencial/index',  'visible'=>Yii::app()->user->checkAccess("asist")),
-                        array('label' => 'Imprimir Credencial', 'url' => '../aprendiente2/admin',  'visible'=>Yii::app()->user->checkAccess("asist")),
+                        array('label' => 'Consulta', 'url' => '../aprendiente2/admin',  'visible'=>Yii::app()->user->checkAccess("asist")),
+                        #array('label' => 'Imprimir Credencial', 'url' => '../aprendiente2/admin',  'visible'=>Yii::app()->user->checkAccess("asist")),
                         '',
                         array(
                             'label' => 'Acervo', 'visible'=>Yii::app()->user->checkAccess("admin"),
