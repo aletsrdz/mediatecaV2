@@ -24,21 +24,21 @@ $idioma = CHtml::encode($model->idioma);
 $Criteria = new CDbCriteria();
 $Criteria->select = "nombre";
 $Criteria->condition = "ididioma=$idioma";
-$languaje = idioma::model()->find($Criteria);
+$languaje = Idioma::model()->find($Criteria);
 $model->idioma = $languaje->nombre;
 
 $cat = $model->categoria;
 $Criteria = new CDbCriteria();
 $Criteria ->select = "nombre";
 $Criteria ->condition = "idcategoria=$cat";
-$categoria = categoria::model()->find($Criteria);
+$categoria = Categoria::model()->find($Criteria);
 $model->categoria = $categoria->nombre;
 
 $prec = $model->procedencia;
 $Criteria = new CDbCriteria();
 $Criteria ->select = "nomabrevia";
 $Criteria ->condition = "dependencia=$prec";
-$procedencia = dependencia::model()->find($Criteria);
+$procedencia = Dependencia::model()->find($Criteria);
 
 #if($procedencia->nomabrevia == null) $model->procedencia = "Dependencia sin definir";
 #if($procedencia->nomabrevia =! null) $model->procedencia = $procedencia->nomabrevia;
@@ -95,19 +95,21 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 
 <br>
+<!--
 <?php echo CHtml::link('Código de barras - PDF', array('generarCredencial', "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente), array('target'=>'_blank'));?>
+-->
 </br>
 <?php $this->widget(
     'booster.widgets.TbButton',
     array(
     	'buttonType' =>'link',
-        'label' => 'Reinscripción',
+        'label' => 'Imprimir Credencial',
         'context' => 'primary',
         #'url' => 'array(generarCredencial, "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente),',
-        'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', array("nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente)),
-        'htmlOptions' => array(
-        	#'linkOptions' => array('target'=>'_blank'),
-        	'onclick' => 'js:bootbox.alert("Generar credencial!")',        	
+        'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', array("nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente)),        
+        'htmlOptions' => array(        	
+        	'target' => '_blank',
+        	'onclick' => 'js:bootbox.alert("Se ha generado la credencial!")',          	
         )	
 
     )

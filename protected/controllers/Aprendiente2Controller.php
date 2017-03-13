@@ -32,17 +32,17 @@ class Aprendiente2Controller extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial'),
+				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial', 'asistencia'),
 				#'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial'),
+				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial', 'asistencia'),
 				#'users'=>array('@'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial'),
+				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial', 'asistencia'),
 				#'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -168,8 +168,8 @@ class Aprendiente2Controller extends Controller
 			$model->idaprendiente = $idaprendiente;
 			$model->fecharegistro = date("Y-m-d");
 			$model->fechainscripcion = date("Y-m-d");
-			$model->nombre = $_POST['Aprendiente2']['nombre'];
-			$model->cta_rfc = $_POST['Aprendiente2']['cta_rfc'];
+			$model->nombre = strtoupper($_POST['Aprendiente2']['nombre']);
+			$model->cta_rfc = strtoupper($_POST['Aprendiente2']['cta_rfc']);
 			$model->categoria = $_POST['Aprendiente2']['categoria'];
 			$model->idioma = $_POST['Aprendiente2']['idioma'];
 			$model->procedencia = $_POST['Aprendiente2']['procedencia'];
@@ -188,6 +188,8 @@ class Aprendiente2Controller extends Controller
 
 			//$model->attributes=$_POST['Aprendiente2'];
 			if($model->save())
+				$user=Yii::app()->getComponent('user');
+				$user->setFlash('success', 'El Aprendiente se ha inscrito a la Mediateca');
 				$this->redirect(array('view','id'=>$model->idaprendiente));
 		}
 
@@ -201,7 +203,7 @@ class Aprendiente2Controller extends Controller
 	{
 		
 
-		$model=$this->loadModel($id);
+		$model=$this->loadModel($id);		
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -307,8 +309,9 @@ class Aprendiente2Controller extends Controller
 	{
 		$model=new Aprendiente2('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Aprendiente2']))
-			$model->attributes=$_GET['Aprendiente2'];
+		if(isset($_GET['Aprendiente2']))		
+			$model->attributes=$_GET['Aprendiente2'];			
+		
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -328,6 +331,11 @@ class Aprendiente2Controller extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	}
+	
+	public function actionAsistencia() 
+	{
+		$this->redirect('../../asistencia/admin');
 	}
 
 

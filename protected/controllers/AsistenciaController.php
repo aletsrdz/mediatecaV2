@@ -1,180 +1,229 @@
 <?php
 
-
-use Yii\widgets\ActiveForm;
+use yii\widgets\ActiveForm;
 use yii\web\Response;
-
-
-
 
 class AsistenciaController extends Controller
 {
-	public $layout='//layouts/lefty';	
-    /**
-	 * Declares class-based actions.
+	/**
+	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
+	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public function actions()
-	{
-		// $this->redirect(\Yii::$app->urlManager->createUrl("local/index"));
-		
-	}
-    
+	//public $layout='//layouts/column2'; 
+	  public $layout='//layouts/lefty';	
 
 	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
+	 * @return array action filters
 	 */
-	public function actionIndex()
-	{	
-		$model = new AsistenciaForm; 	 
-		/*
-		$baseUrl = Yii::app()->baseUrl; 
-        #echo $baseUrl."</br>";
-        $cs = Yii::app()->getClientScript();        
-        $cs->registerScriptFile($baseUrl.'/js/alertaBarras.js');
-       */
-		$this->render('index');
-		
-		
-		
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'roles'=>array('admin'),
+				#'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'roles'=>array('admin'),
+				#'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'roles'=>array('admin'),
+				#'users'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
 	}
 	
-	public function actionAjaxProcessor(){
-    $a = $_POST['idAprendiente'];
-	
-	if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-		
-	if(isset($_POST['AsistenciaForm']))
-		{
-				$a = $_POST['idAprendiente'];
-				
-		}	
-		
-		
-	$this->render('view',array(
-			'model'=>$this->loadModel($a),
-	));
-	
-    // process $a and get output $b
-    // output some JSON instead of the usual text/html
-	/*
-	$b = $a;
-    header('Content-Type: application/json; charset="UTF-8"');
-    echo CJSON::encode(array('output'=>$b));
-	*/
-    }
-	
-	public function actionGetAprendiente($idAprendiente)
+	public function actionCreateAprendiente()
 	{
-		//encuentra el Id del aprendiente
-		
+		$this->redirect('../aprendiente2/create');
 	}
 	
-	public function actionAsistencia($id)
+	public function actionConsultaAprendiente()
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='formulario')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+		$this->redirect('../asistencia/aprendiente2/admin');
+	}
+	
+		
+	
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionView($id)
+	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
-	
-	public function actionObtenerHora(){
-		echo date('Y-m-d H:i:s');
-	}
-	
 
 	/**
-	 * This is the action to handle external exceptions.
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionError()
+	public function actionCreate()
 	{
-		if($error=Yii::app()->errorHandler->error)
+		$model=new Asistencia;
+
+		// Uncomment the following line if AJAX validation is needed
+		 $this->performAjaxValidation($model);
+
+		if(isset($_POST['Asistencia']))
 		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
+			#$model->attributes=$_POST['Asistencia'];
+			$model->idaprendiente = $_POST['Asistencia']['idaprendiente'];
+			$model->horaentrada = date("Y-m-d H:i:s");
+			$model->horasalida = date("Y-m-d 00:00:00");
+			$model->estatus = 'true';
+
+            $valid=$model->validate();            
+            /*
+            if($valid){
+                              
+               //do anything here like verificar que el Id tenga estatus igual a true
+            	$Criteria = new CDbCriteria();
+				
+				$Criteria -> limit = 1;
+				$Criteria -> order = "idaprendiente DESC";            	
+
+                 echo CJSON::encode(array(
+                      'status'=>'success'
+                 ));
+                Yii::app()->end();
+                }
+                else{
+                    $error = CActiveForm::validate($model);
+                    if($error!='[]')
+                        echo $error;
+                    Yii::app()->end();
+                }			
+
+			/*
+			echo '<pre>';
+			print_r($model);
+			echo '</pre>';
+			Yii::app()->end(); // termino la aplicación para poder ver los resultados en pantalla 
+			*/
+			if($model->save())				
+				$this->redirect(array('view','id'=>$model->idaprendiente));
 		}
+
+		$this->render('create',array(
+			'model'=>$model,
+		));
 	}
-    
-    
-    public function actionEjemplo(){
-        $user = Yii::app()->getComponent('user');
-        $user->setFlash(
-        'success',
-        "<strong>Well done!</strong> You're successful in reading this."
-        );
-    }
+
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionUpdate($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Asistencia']))
+		{
+			$model->attributes=$_POST['Asistencia'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->idaprendiente));
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Deletes a particular model.
+	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * @param integer $id the ID of the model to be deleted
+	 */
+	public function actionDelete($id)
+	{
+		$this->loadModel($id)->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			#$user=Yii::app()->getComponent('user');
+			#$user->setFlash('success', 'Se ha borrado el registro');				
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+
+	/**
+	 * Lists all models.
+	 */
+	public function actionIndex()
+	{
+		$dataProvider=new CActiveDataProvider('Asistencia');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
+	/**
+	 * Manages all models.
+	 */
+	public function actionAdmin()
+	{
+		$model=new Asistencia('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Asistencia']))
+			$model->attributes=$_GET['Asistencia'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
 	
 	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Asistencia the loaded model
+	 * @throws CHttpException
+	 */
+	public function loadModel($id)
+	{
+		$model=Asistencia::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
 	 * Performs the AJAX validation.
-	 * @param Aprendiente $model the model to be validated
+	 * @param Asistencia $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='formulario')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='asistencia-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
-    
-	
-	public function actionValidarCodigoAprendiente()
-	{
-		$model = new AsistenciaForm;        
-		$msg = null;
-		
-		if(isset($_POST['ajax']) && $_POST['ajax']==='formulario')
-		{
-			echo CActiveForm::validate($model);
-			echo "entro a ajax";
-			Yii::app()->end();
-		}
-		
-		/*
-		if(Yii::$app->request->isAjax && $model->load(Yii::$app->request->post()))
-		{
-			Yii::$app->response->format = 'json';
-			return ActiveForm::validate($model);
-		}
-		*/
-		/*
-		if($model->load(Yii::app->request->post()) && Yii::$app->request->isAjax)
-		{
-			Yii::app->response->format = Response::FORMAT_JSON;
-			return ActiveForm::validate($model);
-		}
-		
-		if($model->load(Yii::app->request->post()))
-		{
-			if($model->validate())
-			{
-				//Hacer una consulta a la base de datos
-				$msg = "El codigo se envio correctamente";
-				$model->codigo = null;
-				
-			}
-			else{
-				$model->getErrors();
-			}
-			
-		}
-		*/
-		return $this->render("validarCodigoAprendiente", array('model'=>$model, 'msg'=>$msg));
-		
-		
-
-	}
-    
-
-	
 }

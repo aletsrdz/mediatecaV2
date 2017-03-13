@@ -71,7 +71,7 @@
                 $model,
                 'nombre',
                 array(
-                    'wrapperHtmlOptions' => array('class' => 'col-sm-5'),                    
+                    'wrapperHtmlOptions' => array('class' => 'col-sm-5', 'style'=>'text-transform:uppercase;'),                    
                 )
             ); 				
 			$Criteria = new CDbCriteria();

@@ -1,25 +1,20 @@
 <?php
-/* @var $this LocalController */
-echo "Estas autenticado como".Yii::app()->user->name;
-$baseUrl = Yii::app()->baseUrl; 
-#echo $baseUrl."</br>";
-$cs = Yii::app()->getClientScript();        
-$cs->registerScriptFile($baseUrl.'/js/alertaBarras.js');
+/* @var $this AsistenciaController */
+/* @var $dataProvider CActiveDataProvider */
 
+$this->breadcrumbs=array(
+	'Asistencias',
+);
+
+$this->menu=array(
+	array('label'=>'Create Asistencia', 'url'=>array('create')),
+	array('label'=>'Manage Asistencia', 'url'=>array('admin')),
+);
 ?>
 
+<h1>Asistencias</h1>
 
-
-<h1>ASISTENCIA</h1>
-
-
- 
-   Escanear código de barras:
-  <input type="text" name="valor" id="codigo" value=""/>
-  <br/>
-<!--<button id="boton">Obtener Hora de Servidor</button>-->
-<div id="lblHoraServidor"></div>
-
-<?php //echo"<img src='../../images/espera.gif'>";?>
-
-
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>

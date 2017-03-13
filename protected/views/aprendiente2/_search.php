@@ -69,8 +69,11 @@
 -->
 
 	<div class="row">
-		<?php #echo $form->label($model,'Inscritos'); ?>
-		<?php echo $form->radioButtonList($model,'inscripcion', array('True'=> 'Inscritos', 'False'=>'No inscritos', ''=>'Mostrar todos')); ?>
+
+
+		<?php echo $form->radioButtonList($model,'inscripcion', array('True'=> 'Inscritos','False'=>'No inscritos')); 
+				
+		?>
 
 	</div>
 

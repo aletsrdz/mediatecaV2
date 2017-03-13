@@ -29,21 +29,21 @@ $idioma = CHtml::encode($model->idioma);
 $Criteria = new CDbCriteria();
 $Criteria->select = "nombre";
 $Criteria->condition = "ididioma=$idioma";
-$languaje = idioma::model()->find($Criteria);
+$languaje = Idioma::model()->find($Criteria);
 $model->idioma = $languaje->nombre;
 
 $cat = $model->categoria;
 $Criteria = new CDbCriteria();
 $Criteria ->select = "nombre";
 $Criteria ->condition = "idcategoria=$cat";
-$categoria = categoria::model()->find($Criteria);
+$categoria = Categoria::model()->find($Criteria);
 $model->categoria = $categoria->nombre;
 
 $prec = $model->procedencia;
 $Criteria = new CDbCriteria();
 $Criteria ->select = "nomabrevia";
 $Criteria ->condition = "dependencia=$prec";
-$procedencia = dependencia::model()->find($Criteria);
+$procedencia = Dependencia::model()->find($Criteria);
 
 #if($procedencia->nomabrevia == null) $model->procedencia = "Dependencia sin definir";
 #if($procedencia->nomabrevia =! null) $model->procedencia = $procedencia->nomabrevia;

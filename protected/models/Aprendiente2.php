@@ -21,6 +21,8 @@ class Aprendiente2 extends CActiveRecord
 {
 	public $idioma_search;
 	
+	
+	
 
 	/**
 	 * @return string the associated database table name
@@ -101,12 +103,14 @@ class Aprendiente2 extends CActiveRecord
 		$criteria=new CDbCriteria;
 		$sort = new CSort();
 		$criteria->with = array('idiomas');
+		 #$criteria->addCondition("t.nombre=:nombre");
+		 #$criteria->params = array(":nombre"=>$this->nombre);
 		#$criteria->addCondition('inscripcion=true');
 		$criteria->compare('idaprendiente',$this->idaprendiente);
-		$criteria->compare('fecharegistro',$this->fecharegistro,true);
-		$criteria->compare('fechainscripcion',$this->fechainscripcion,true);
+		$criteria->compare('fecharegistro',$this->fecharegistro);
+		$criteria->compare('fechainscripcion',$this->fechainscripcion);
 		$criteria->compare('cta_rfc',$this->cta_rfc,true);
-		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('t.nombre',$this->nombre,true);
 		$criteria->compare('categoria',$this->categoria);
 		#$criteria->compare('idioma',$this->idioma);
 		$criteria->compare('idiomas.nombre',$this->idioma_search,true);
@@ -128,10 +132,10 @@ class Aprendiente2 extends CActiveRecord
 			'criteria'=>$criteria,
 			#'sort'=>$sort,
 			'sort'=>array(
-						'attributes'=>array(
+						'attributes'=>array(							
 							'idioma_search'=>array(
-							'asc'=>'idiomas.nombre ASC',
-							'desc'=>'idiomas.nombre DESC',
+								'asc'=>'idiomas.nombre ASC',
+								'desc'=>'idiomas.nombre DESC',
 							),
 						),
                         'defaultOrder'=>'idaprendiente DESC',						
@@ -166,12 +170,6 @@ class Aprendiente2 extends CActiveRecord
         //return $this->subdep." ".$this->nomabrevia;    
     }
 	
-	public function getLastAprendiente()
-	{
-//		$idAprendiente = Aprendiente2::model()->find
-	$idAprendiente = 98333039;
-	return $idaprendiente;
-		
-	}
+	
 	
 }
