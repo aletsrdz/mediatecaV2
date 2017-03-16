@@ -327,6 +327,8 @@ class Aprendiente2Controller extends Controller
 	 */
 	public function loadModel($id)
 	{
+		#Criteria = new CDbCriteria();
+		#$Criteria->condition = "horaentrada";
 		$model=Aprendiente2::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');

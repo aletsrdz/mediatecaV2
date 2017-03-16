@@ -24,6 +24,7 @@
 		<?php echo $form->labelEx($model,'No. Aprendiente'); ?>
 		<?php echo $form->textField($model,'idaprendiente'); ?>
 		<?php echo $form->error($model,'idaprendiente'); ?>
+		<?php #echo $form->errorSummary($model,'Por favor verifica los datos que ingresaste');?>
 	</div>
 	<!--
 
@@ -46,7 +47,7 @@
 	</div>
 	-->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Asistencia' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Asistencia' : 'Registrar Salida'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

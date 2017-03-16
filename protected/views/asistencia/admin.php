@@ -53,7 +53,7 @@ $('.search-form form').submit(function(){
 
 <br></br>
 
-<?php echo CHtml::link('Búsqueda Avanzada','#',array('class'=>'search-button')); ?>
+<?php #echo CHtml::link('Búsqueda Avanzada','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -63,7 +63,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'asistencia-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	#'filter'=>$model,
 	'columns'=>array(
 		array(
             'name'=>'idaprendiente',
@@ -71,21 +71,50 @@ $('.search-form form').submit(function(){
             'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
         ),
         array(
-            'name'=>'horaentrada',
+            'name'=>'horaentrada',            
             'header'=>'Hora de Entrada',
+            'value' => 'substr($data->horaentrada, 11)',                 
             'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
         ),
+        /*
         array(
             'name'=>'horasalida',
             'header'=>'Hora de Salida',
+            'value' => 'substr($data->horasalida, 11)',                             
             'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
         ),
+        */
 
 		#'horaentrada',
 		#'horasalida',
 		#'estatus',
+		/*
 		array(
 			'class'=>'CButtonColumn',
 		),
+		*/
+		array(
+			'class'=>'CButtonColumn',
+			'template'=>'{view}{update}{delete}',
+			'buttons'=>array(
+					'htmlOptions'=>array('style' => ' margin-left: 2px'),
+					'view'=>array(
+						'url'=>'Yii::app()->createUrl("asistencia/view", array("id" => $data->idaprendiente, "entrada" => $data->horaentrada))',
+					 ),						
+					'update'=>array(
+						'url'=>'Yii::app()->createUrl("asistencia/update", array("id" => $data->idaprendiente, "entrada" => $data->horaentrada))',
+					 ),
+					'delete'=>array(
+						'url'=>'Yii::app()->createUrl("asistencia/delete", array("id" => $data->idaprendiente, "entrada" => $data->horaentrada))',
+					 ),					
+			),
+			'htmlOptions'=>array('style' => 'width: 100px; text-align: center; margin-left: 2px;'),
+			'header'=>'Acciones',
+
+		),
+
+
+
+
 	),
 )); ?>

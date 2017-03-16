@@ -3,7 +3,7 @@
 /* @var $model Asistencia */
 
 $this->breadcrumbs=array(
-	'Asistencias'=>array('index'),
+	'Asistencias'=>array('admin'),
 	$model->idaprendiente,
 );
 
@@ -15,8 +15,14 @@ $this->menu=array(
 	array('label'=>'Manage Asistencia', 'url'=>array('admin')),
 );
 ?>
+<?php
+	foreach (Yii::app()->user->getFlashes()  as $key => $message) 
+	{
+		echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+	}
+?>
 
-<h1>Detalle de la entrada del aprendiente #<?php echo $model->idaprendiente; ?></h1>
+<h1>Detalle del aprendiente #<?php echo $model->idaprendiente; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -27,3 +33,21 @@ $this->menu=array(
 		#'estatus',
 	),
 )); ?>
+
+<br>
+
+<?php 
+	/*
+	 $this->widget(
+    'booster.widgets.TbButton',
+    array(
+    	'buttonType' =>'link',
+        'label' => 'Registrar salida',
+        'context' => 'primary',
+        #'url' => 'array(generarCredencial, "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente),',
+        'url' => Yii::app()->createUrl('asistencia/update', array("id"=>$model->idaprendiente, "entrada"=>$model->horaentrada)),    
+
+    )
+); echo ' ';
+*/
+?>

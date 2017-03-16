@@ -61,99 +61,107 @@ class AsistenciaController extends Controller
 	{
 		$this->redirect('../asistencia/aprendiente2/admin');
 	}
-	
-		
+
+	public function actionAsistenciaUpdate()
+	{
+		$this->redirect('../../../admin');
+	}	
+
 	
 
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+
+	public function actionView($id, $entrada)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+		$model=$this->loadModel($id, $entrada);
+		$this->render('view',array('model'=>$model));
 	}
 
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
+
 	public function actionCreate()
 	{
 		$model=new Asistencia;
-
-		// Uncomment the following line if AJAX validation is needed
-		 $this->performAjaxValidation($model);
-
+		$this->performAjaxValidation($model);
 		if(isset($_POST['Asistencia']))
 		{
 			#$model->attributes=$_POST['Asistencia'];
 			$model->idaprendiente = $_POST['Asistencia']['idaprendiente'];
 			$model->horaentrada = date("Y-m-d H:i:s");
 			$model->horasalida = date("Y-m-d 00:00:00");
-			$model->estatus = 'true';
+			$model->estatus = 'true';		
+			if($model->validate())
+			{
+				$this->saveModel($model);				
+					$user=Yii::app()->getComponent('user');
+					$user->setFlash('success', 'Se ha registrado la ENTRADA del Aprendiente');				
+					$this->redirect('admin');
+			}			
 
-            $valid=$model->validate();            
-            /*
-            if($valid){
-                              
-               //do anything here like verificar que el Id tenga estatus igual a true
-            	$Criteria = new CDbCriteria();
-				
-				$Criteria -> limit = 1;
-				$Criteria -> order = "idaprendiente DESC";            	
-
-                 echo CJSON::encode(array(
-                      'status'=>'success'
-                 ));
-                Yii::app()->end();
-                }
-                else{
-                    $error = CActiveForm::validate($model);
-                    if($error!='[]')
-                        echo $error;
-                    Yii::app()->end();
-                }			
-
-			/*
-			echo '<pre>';
-			print_r($model);
-			echo '</pre>';
-			Yii::app()->end(); // termino la aplicación para poder ver los resultados en pantalla 
-			*/
-			if($model->save())				
-				$this->redirect(array('view','id'=>$model->idaprendiente));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		}		
+			$this->render('create',array('model'=>$model));
+		
+			
 	}
+
+	
 
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+	public function actionUpdate($id, $entrada)
+	{
+		$model=$this->loadModel($id, $entrada);
 
 		if(isset($_POST['Asistencia']))
 		{
 			$model->attributes=$_POST['Asistencia'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->idaprendiente));
+			$model->horasalida = date("Y-m-d H:i:s");
+			$model->estatus = 'false'; // actualizar los datos del aprendiente
+			$model->update();
+			$user=Yii::app()->getComponent('user');
+			$user->setFlash('success', 'Se ha registrado la SALIDA del Aprendiente');				
+			$this->render('view',array('model'=>$model));		
+			Yii::app()->end();			
 		}
+			$this->render('update',array('model'=>$model));
+	}	
 
-		$this->render('update',array(
-			'model'=>$model,
-		));
+
+	public function saveModel($model)
+	{
+		try
+		{
+			$model->save();			
+		}
+		catch(Exception $e)
+		{
+			$this->showError($e);
+			
+		}
+	}
+
+	public function showError(Exception $e)
+	{
+	// Error: 1022 SQLSTATE: 23000 (ER_DUP_KEY)
+		if($e->getCode()==23000)
+		{
+			$message = "This operation is not permitted due to an existing foreign key reference.";
+		}
+		else
+		{
+			$message = "Operacion Invalida.";
+		}
+			throw new CHttpException($e->getCode(), $message);
 	}
 
 	/**
@@ -161,15 +169,26 @@ class AsistenciaController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			#$user=Yii::app()->getComponent('user');
-			#$user->setFlash('success', 'Se ha borrado el registro');				
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	public function actionDelete($id, $entrada)
+	{
+		if(Yii::app()->request->isPostRequest)
+		{
+			try
+			{
+				// we only allow deletion via POST request
+				$this->loadModel($id, $entrada)->delete();
+			}
+			catch(Exception $e)
+			{
+				$this->showError($e);
+			}
+			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+			if(!isset($_GET['ajax']))
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		}
+		else
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
 	/**
@@ -206,13 +225,31 @@ class AsistenciaController extends Controller
 	 * @return Asistencia the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
+		
+	
+
+	public function loadModel($id, $entrada)
 	{
-		$model=Asistencia::model()->findByPk($id);
+		$model=Asistencia::model()->findByPk(array('idaprendiente'=>$id, 'horaentrada'=>$entrada));
+		if($model==null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+
+		/*
+		$Criteria = new CDbCriteria;		
+		$Criteria->condition='id=:id AND horaentrada=:horaentrada';		
+		$Criteria->params=array(':id'=>$id, ':horaentrada'=>$horaentrada);		
+		
+		$model=Asistencia::model()->findByPk($id, 'horaentrada=:horaentrada', array(':horaentrada'=>$horaentrada));
+		
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+		*/
+
 	}
+
+
 
 	/**
 	 * Performs the AJAX validation.

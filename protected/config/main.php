@@ -60,6 +60,7 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
+			#'urlRuleClass'=>'MyUrlRule', // para  que la URL soporte llave primarias compuestas
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
