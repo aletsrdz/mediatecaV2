@@ -57,7 +57,7 @@ class Aprendiente2 extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'inscripcion' => array(self::HAS_ONE, 'Inscripcion', 'idaprendiente'),
+			'asistencias' => array(self::MANY_MANY, 'Asistencia', 'Asistencia(idaprendiente, horaentrada)'),
 			'idiomas' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
 		);
 	}

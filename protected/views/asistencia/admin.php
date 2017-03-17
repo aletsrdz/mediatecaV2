@@ -63,19 +63,29 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'asistencia-grid',
 	'dataProvider'=>$model->search(),
+	'emptyText' => 'NO SE ENCONTRARÓN RESULTADOS',
+	'summaryText' => 'Mostrar {start} - {end} de {count}',
+	'pager' => array('class' => 'CLinkPager', 'header' => 'Ir a página:', 'nextPageLabel'=>"Siguiente", 'prevPageLabel'=>'Anterior'),
 	#'filter'=>$model,
 	'columns'=>array(
 		array(
             'name'=>'idaprendiente',
             'header'=>'No.',
             'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
-        ),
+        ),    
+        array(
+            'name'=>'nombre_search',            
+            'header'=>'Nombre del Aprendiente',            
+            'value' => '$data->nombre_aprendiente->nombre',                           
+            'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
+        ),    
         array(
             'name'=>'horaentrada',            
             'header'=>'Hora de Entrada',
             'value' => 'substr($data->horaentrada, 11)',                 
             'htmlOptions'=>array('style'=>'width: 5px; text-align: center;'),            
         ),
+        
         /*
         array(
             'name'=>'horasalida',

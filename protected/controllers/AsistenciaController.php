@@ -32,17 +32,17 @@ class AsistenciaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'actions'=>array('index','view', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2'),
 				'roles'=>array('admin'),
 				#'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'actions'=>array('create','update', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2'),
 				'roles'=>array('admin'),
 				#'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
+				'actions'=>array('admin','delete', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2','aprendiente2create'),
 				'roles'=>array('admin'),
 				#'users'=>array('admin'),
 			),
@@ -62,9 +62,14 @@ class AsistenciaController extends Controller
 		$this->redirect('../asistencia/aprendiente2/admin');
 	}
 
-	public function actionAsistenciaUpdate()
+	public function actionAsistencia()
 	{
-		$this->redirect('../../../admin');
+		$this->redirect('../../asistencia/admin');
+	}
+
+	public function actionAprendiente2()
+	{
+		$this->redirect('../../aprendiente2/admin');
 	}	
 
 	

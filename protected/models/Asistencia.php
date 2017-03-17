@@ -14,6 +14,8 @@
  */
 class Asistencia extends CActiveRecord
 {
+	public $nombre_search;	
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -49,7 +51,7 @@ class Asistencia extends CActiveRecord
 			array('idaprendiente', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idaprendiente, horaentrada, horasalida, estatus', 'safe', 'on'=>'search'),
+			array('idaprendiente, horaentrada, horasalida, estatus, nombre_search ', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +81,7 @@ class Asistencia extends CActiveRecord
 		return array(
 			#'idaprendiente0' => array(self::BELONGS_TO, 'Aprendiente', 'idaprendiente'),
 			'idaprendiente0' => array(self::BELONGS_TO, 'Aprendiente', 'idaprendiente'),
+			'nombre_aprendiente' => array(self::BELONGS_TO, 'Aprendiente2', 'idaprendiente'),
 		);
 	}
 
@@ -88,10 +91,13 @@ class Asistencia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idaprendiente' => 'No',
+			'idaprendiente' => 'No',			
 			'horaentrada' => 'Hora de entrada',
 			'horasalida' => 'Hora de salida',
 			'estatus' => 'Estatus',
+			'nombre_search' => 'Nombre del Aprendiente',
+			
+			
 		);
 	}
 
@@ -112,13 +118,28 @@ class Asistencia extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$sort = new CSort();
+		$criteria->with = array('nombre_aprendiente');
 		$criteria->compare('idaprendiente',$this->idaprendiente);
+		$criteria->compare('nombre_aprendiente.nombre',$this->nombre_search, true);
 		$criteria->compare('horaentrada',$this->horaentrada,true);
 		$criteria->compare('horasalida',$this->horasalida,true);
 		$criteria->compare('estatus',$this->estatus='true',true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+						'attributes'=>array(							
+							'nombre_search'=>array(
+								'asc'=>'nombre_aprendiente.nombre ASC',
+								'desc'=>'nombre_aprendiente.nombre DESC',
+							),
+						),
+                        'defaultOrder'=>'horaentrada DESC',						
+                    ),
+			'pagination'=>array('pageSize'=>15),
+
+
 		));
 	}
 

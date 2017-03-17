@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Asistencias'=>array('admin'),
-	$model->idaprendiente=>array('view','id'=>$model->idaprendiente),
+	$model->idaprendiente=>array('view','id'=>$model->idaprendiente, 'entrada'=>$model->horaentrada),
 	'Update',
 );
 
