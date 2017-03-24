@@ -19,6 +19,7 @@ class LocalController extends Controller
 	 */
 	public function actionIndex()
 	{		
+ 
        //$model = new LoginForm;  
 	   //$this->render('index', array("model"=>$model));
 	   
@@ -36,11 +37,19 @@ class LocalController extends Controller
 			$model->attributes=$_POST['BusquedaForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				#$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect('listadoAcervo');
 		}        
         $this->render('index',array('model'=>$model));       
-        
+ 
+
+ 
+
+
 	}
+
+	
+
     
     public function actionClientes()
     {        

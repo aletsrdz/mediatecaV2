@@ -30,6 +30,7 @@
  */
 class Acervo extends CActiveRecord
 {
+	public $idioma_search;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -51,7 +52,7 @@ class Acervo extends CActiveRecord
 			array('isbn, issn, clave, titulo, autor_personal, autor_corporativo, edicion, pie_imp, descripcion_fisica, serie, nota, descripcion_area, fondo, resumen, referencia, dificultad, cata, fechaingreso, cons', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idacervo, material, isbn, issn, idioma, clave, titulo, autor_personal, autor_corporativo, edicion, pie_imp, descripcion_fisica, serie, nota, descripcion_area, fondo, resumen, acento, referencia, dificultad, cata, fechaingreso, cons', 'safe', 'on'=>'search'),
+			array('idacervo, material, isbn, issn, idioma, clave, titulo, autor_personal, autor_corporativo, edicion, pie_imp, descripcion_fisica, serie, nota, descripcion_area, fondo, resumen, acento, referencia, dificultad, cata, fechaingreso, cons, idioma_search', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class Acervo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'idiomas' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
 		);
 	}
 
@@ -95,6 +97,7 @@ class Acervo extends CActiveRecord
 			'cata' => 'Cata',
 			'fechaingreso' => 'Fecha de Ingreso',
 			'cons' => 'Cons',
+			'idioma_search'=>'Idioma',
 		);
 	}
 
@@ -115,12 +118,15 @@ class Acervo extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$sort = new CSort();
+		$criteria->with = array('idiomas');
 
 		$criteria->compare('idacervo',$this->idacervo);
 		$criteria->compare('material',$this->material);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('issn',$this->issn,true);
-		$criteria->compare('idioma',$this->idioma);
+		#$criteria->compare('idioma',$this->idioma);
+		$criteria->compare('idiomas.nombre',$this->idioma_search,true);
 		$criteria->compare('clave',$this->clave,true);
 		$criteria->compare('titulo',$this->titulo,true);
 		$criteria->compare('autor_personal',$this->autor_personal,true);
@@ -142,6 +148,17 @@ class Acervo extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+						'sort'=>array(
+						'attributes'=>array(							
+							'idioma_search'=>array(
+								'asc'=>'idiomas.nombre ASC',
+								'desc'=>'idiomas.nombre DESC',
+							),
+						),
+                        #'defaultOrder'=>'idaprendiente DESC',						
+                    ),
+			'pagination'=>array('pageSize'=>10),
+
 		));
 	}
 

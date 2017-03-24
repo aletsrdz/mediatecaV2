@@ -160,7 +160,9 @@ div.search-form
 {
 	padding: 10px;
 	margin: 10px 0;
-	background: #eee;
+	background: #fff;
+	/*background: #eee; COLOR ORIGINAL  alexRdz 24 mar 2016*/
+
 }
 
 .portlet

@@ -1,15 +1,14 @@
 <?php
-/* @var $this LocalController */
+/* @var $this SiteController */
 
-
-//echo "Estas autenticado como: ".Yii::app()->user->name;
-
+$this->pageTitle=Yii::app()->name;
 ?>
 
-<!--<h1>Congratulations! You have successfully created LOCAL application.</h1>-->
+<h1>Bienvenido a Mediateca<i></i></h1>
+
+<p>Realiza la búsqueda en todos los catálogos de Mediateca</p>
 
 <?php /** @var TbActiveForm $form */
-
 $form = $this->beginWidget(
 	'booster.widgets.TbActiveForm',
 	array(
@@ -29,7 +28,7 @@ $form = $this->beginWidget(
 				'wrapperHtmlOptions' => array(
 					'class' => 'col-sm-5',
 				),
-				'hint' => ' Escribe palabras claves para hacer una busqueda en los catálogos de Mediateca.'
+				'hint' => ' Estoy en SITE/INDEX Escribe palabras claves para hacer una busqueda en los catálogos de Mediateca.'
 			)
 		); ?>
 		
@@ -40,14 +39,14 @@ $form = $this->beginWidget(
 				'wrapperHtmlOptions' => array(
                     'class' => 'col-sm-5',
 				),
-	   			'widgetOptions' => array(        
-	   				'data' => array('titulo'=> 'Titulo','autor_personal'=>'Autor', 'idioma'=>'Idioma', 'dificultad'=>'Difucultad'),            
-	   				#'data' => array('Titulo', 'Autor', 'Tema', 'Todos los campos'),
-					'htmlOptions' => array('multiple' => true),
+	   			'widgetOptions' => array(                    
+	   				'data' => array('titulo'=> 'Titulo','autor_personal'=>'Autor', 'idioma'=>'Idioma'),
+					'htmlOptions' => array('multiple' => True),
                     
 				)
 			)
 		); ?>
+		
 		
 <div class="form-actions">
 		<?php $this->widget(
@@ -71,4 +70,4 @@ $form = $this->beginWidget(
 	</div>
 <?php
 $this->endWidget();
-unset($form);	
+unset($form);					

@@ -43,6 +43,7 @@ class Idioma extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'aprendiente'=>array(self::HAS_MANY, 'Aprendiente2', 'idioma'),
+			'acervo'=>array(self::HAS_MANY, 'Acervo', 'idioma'),
 		);
 	}
 

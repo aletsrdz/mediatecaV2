@@ -22,36 +22,100 @@ class SiteController extends Controller
 		);
 	}
 
+public function actionView($id)
+	{
+		$this->render('acervo/view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+public function actionIndex()
+	{
+		/*$dataProvider=new CActiveDataProvider('Acervo');
+		$this->render('acervo/index',array(
+			'dataProvider'=>$dataProvider,
+		));
+		*/
+		$model=new Acervo('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Acervo']))
+			$model->attributes=$_GET['Acervo'];
+
+		$this->render('acervo/admin',array(
+			'model'=>$model,
+		));
+	}	
+
+public function actionAdmin()
+	{
+		$model=new Acervo('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Acervo']))
+			$model->attributes=$_GET['Acervo'];
+
+		$this->render('acervo/admin',array(
+			'model'=>$model,
+		));
+	}	
+
+	public function loadModel($id)
+	{
+		$model=Acervo::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param Acervo $model the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='acervo-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
 
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		//$this->render('index');
-        //$this->layout="lefty";
-        $model = new BusquedaForm;        		
-        
+	//public function actionIndex()
+	//{		
+       /*
+        $model = new BusquedaForm;    
         if(isset($_POST['ajax']) && $_POST['ajax']==='horizontalForm')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
 		// collect user input data
 		if(isset($_POST['BusquedaForm']))
-		{
+		{			
 			$model->attributes=$_POST['BusquedaForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate())
+			{	
+				$criteria=new CDbCriteria;
+				$criteria->compare('titulo', $model->busquedaEn, true);
+				#$criteria->compare('autor_personal', $model->busquedaEn, true);
+				#$criteria->compare('idioma', $model->busquedaEn, true);
+				$dataProvider=new CActiveDataProvider('Acervo', array('criteria'=>$criteria));				
+				$this->render('busqueda',array(
+					'dataProvider'=>$dataProvider,
+				));				
+			}				
 		}        
-        $this->render('index',array('model'=>$model));       
-	}
+		*/
+      //  $this->render('index',array('model'=>$model));       
+        
+        
+    //}
 
+	
 	/**
 	 * This is the action to handle external exceptions.
 	 */

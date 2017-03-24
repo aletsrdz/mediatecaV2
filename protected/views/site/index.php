@@ -40,12 +40,13 @@ $form = $this->beginWidget(
                     'class' => 'col-sm-5',
 				),
 	   			'widgetOptions' => array(                    
-	   				'data' => array('Titulo', 'Autor', 'Tema', 'Todos los campos'),
-					'htmlOptions' => array('multiple' => true),
+	   				'data' => array('titulo'=> 'Titulo','autor_personal'=>'Autor', 'idioma'=>'Idioma'),
+					'htmlOptions' => array('multiple' => True),
                     
 				)
 			)
 		); ?>
+		
 		
 <div class="form-actions">
 		<?php $this->widget(
