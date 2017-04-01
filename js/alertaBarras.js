@@ -1,4 +1,17 @@
 window.onload = function(){
+
+
+/*
+
+	$("#asistencia").click(function(){
+		var audio = new Audio('../sounds/tada.wav');
+		audio.play();				
+		//alert("presionaste Asistencia "+ audio);
+  		
+	});
+
+*/	
+
 	$("#codigo").change(function(){
 		var codigo = document.getElementById("codigo").value;
 			alert("El codigo es: " + codigo);		
@@ -42,8 +55,12 @@ window.onload = function(){
 	});
 	
 
-
+function sonidoJavaScript()
+{
+	alert("EXITO");
+}
 
 
 	
 }//cierre de window.onload	
+

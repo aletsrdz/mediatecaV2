@@ -43,12 +43,9 @@ or <b>=</b>) al principio de cada uno de los valores de búsqueda para especific
 </div><!-- search-form -->
 
 <?php 
-	/*
-	echo "<pre>";
-	echo print_r($model);
-	echo "</pre>";
-	Yii::app()->end();
-	*/
+	
+
+	
 	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'acervo-grid',
 	'dataProvider'=>$model->search(),
@@ -59,15 +56,15 @@ or <b>=</b>) al principio de cada uno de los valores de búsqueda para especific
 	'columns'=>array(
 		#'idacervo',
 		array('name' => 'material',
+			  'value' => '$data->materiales->descripcion', 
 		),
 		array('name' => 'isbn',
 		),
 		array('name' => 'issn',
 		),	
         array(
-            'name'=>'idioma_search',
-            'header'=>'Idioma',
-            'value' => '$data->idioma',           
+            'name'=>'idioma',            
+            'value' => '$data->idioma',                 
             'htmlOptions'=>array('style'=>'width: 30px; text-align: center;'),            
         ),
 		#'clave',		
@@ -98,4 +95,7 @@ or <b>=</b>) al principio de cada uno de los valores de búsqueda para especific
 		),
 		*/
 	),
-)); ?>
+)); 
+	
+
+?>

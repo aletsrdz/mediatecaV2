@@ -42,11 +42,13 @@ class Asistencia extends CActiveRecord
 			array('idaprendiente', 'required'),
 			array('idaprendiente', 'length', 'min'=>'6', 'tooShort'=>'El código del aprendiente válido es longitud 6', 'max'=>'10', 'tooLong'=>"El código del aprendiente es menor a 10"),
 			array('idaprendiente', 'validarEstatus'),			
+			/*
 			array('idaprendiente','exist','allowEmpty' => false, 'attributeName' => 'idaprendiente', 'className' => 'Aprendiente2',
 			      'message'=>'El aprendiente NO esta inscrito, favor de inscribirse',
 			      'criteria' => array('condition'=> 'inscripcion=:inscripcion', 
 			      	 'params'=>array(':inscripcion'=>'t')), 
 				),
+			*/
 			array('idaprendiente', 'numerical', 'allowEmpty'=> false, 'integerOnly'=>true,),
 			array('idaprendiente', 'safe'),
 			// The following rule is used by search().
@@ -63,9 +65,34 @@ class Asistencia extends CActiveRecord
 		$criteria = new CDbCriteria();
 		$criteria->condition = 'idaprendiente=:idaprendiente AND estatus=:estatus';
 		$criteria->params= array(':idaprendiente'=>$this->idaprendiente, ':estatus'=>'true');
+
+		
+		$criteria2 = new CDbCriteria();
+		#$criteria2->select = 'idaprendiente';
+		$criteria2->condition = 'idaprendiente=:idaprendiente AND inscripcion=:inscripcion';
+		$criteria2->params= array(':idaprendiente'=>$this->idaprendiente,':inscripcion'=>'f');
 	
 		if (Asistencia::model()->exists($criteria))			
-        	$this->addError('idaprendiente', 'Ya se encuentra dentro de la MEDIATECA y no ha registrado su salida');
+		{	
+			echo "<script>";
+			echo "var audio = new Audio('../../../sounds/ringout.wav');";
+			echo "audio.play();";
+			echo "</script>";
+        	$this->addError('idaprendiente', 'Ya se encuentra dentro de la MEDIATECA y no ha registrado su salida');        	        	
+        }	
+
+        elseif(Aprendiente2::model()->exists($criteria2))
+        {
+			echo "<script>";
+			echo "var audio = new Audio('../../../sounds/ringout.wav');";
+			echo "audio.play();";
+			echo "</script>";
+        	$this->addError('idaprendiente', 'El aprendiente NO esta inscrito, favor de inscribirse');        	        	
+
+        }	
+
+        elseif($this->idaprendiente == "")
+        	$this->addError('idaprendiente', 'No puede estar vacio el campo, por favor escanea un código');
         elseif($this->idaprendiente == "123456")
 			$this->addError('idaprendiente', 'Ingresaste 123456');	
 		

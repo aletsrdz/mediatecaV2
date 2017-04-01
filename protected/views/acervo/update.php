@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Acervo <?php echo $model->idacervo; ?></h1>
+<h1>Actualizar Acervo <?php echo $model->idacervo; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

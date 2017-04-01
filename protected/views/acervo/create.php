@@ -12,7 +12,5 @@ $this->menu=array(
 	array('label'=>'Manage Acervo', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Create Acervo</h1>
-
+<h1>Crear Acervo</h1>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

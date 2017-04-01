@@ -16,7 +16,23 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Acervo #<?php echo $model->idacervo; ?></h1>
+<h1>Detalle Acervo #<?php echo $model->idacervo; ?></h1>
+
+<?php $this->widget(
+    'booster.widgets.TbButton',
+    array(
+    	'buttonType' =>'link',
+        'label' => 'Copiar Acervo',
+        'context' => 'primary',        
+        'url' => Yii::app()->createUrl('acervo/copiar', array('id'=>$model->idacervo)),
+        'htmlOptions' => array(      
+        	#'onclick' => 'js:bootbox.alert("Generar credencial!")',        	
+        )	
+
+    )
+); echo ' ';
+?>
+<br></br>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

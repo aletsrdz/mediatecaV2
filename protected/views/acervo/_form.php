@@ -6,161 +6,322 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'acervo-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+<?php /** @var TbActiveForm $form */
+$form = $this->beginWidget(
+	'booster.widgets.TbActiveForm',
+	array(
+		'id' => 'horizontalForm',
+		'type' => 'horizontal',
+	)
+); ?>
+ 
+	<fieldset>
+ 
+		<legend>Crear Acervo</legend>
+ 	
+		<?php
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "idmaterial ASC";
+			echo $form->dropDownListGroup(
+                $model,
+                'material',
+                array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+	   			'widgetOptions' => array(
+				
+					'data' => CHtml::listData(Material::model()->findAll($Criteria),"idmaterial" ,"SelectMaterial"),	   				
+					'htmlOptions' => array(
+						'empty'=>'Seleccione Material',
+						//'multiple' => true
+					),
+				)
+			)
+            ); 
+         ?> 		
+		<?php echo $form->textFieldGroup(
+			$model,
+			'isbn',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+		<?php echo $form->textFieldGroup(
+			$model,
+			'issn',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>		
 
-	<?php echo $form->errorSummary($model); ?>
+		<?php
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "ididioma ASC";
+			echo $form->dropDownListGroup(
+                $model,
+                'idioma',
+                array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+	   			'widgetOptions' => array(
+				
+					'data' => CHtml::listData(Idioma::model()->findAll($Criteria),"ididioma" ,"SelectIdioma"),	   				
+					'htmlOptions' => array(
+						'empty'=>'Seleccione Idioma',
+						//'multiple' => true
+					),
+				)
+			)
+            ); 
+        ?>    
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'idacervo'); ?>
-		<?php echo $form->textField($model,'idacervo'); ?>
-		<?php echo $form->error($model,'idacervo'); ?>
+		<?php echo $form->textFieldGroup(
+			$model,
+			'clave',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textAreaGroup(
+			$model,
+			'titulo',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'widgetOptions' => array(
+					'htmlOptions' => array('rows' => 5),
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'autor_personal',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'autor_corporativo',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'edicion',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>		
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'pie_imp',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'descripcion_fisica',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'serie',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'nota',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'descripcion_area',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'fondo',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textAreaGroup(
+			$model,
+			'resumen',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'widgetOptions' => array(
+					'htmlOptions' => array('rows' => 5),
+				),
+				'hint' => 'Escribe el resumen que identifica al acervo'
+			)
+		); ?>
+
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'acento',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'referencia',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>		
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'dificultad',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'cata',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+		<?php 
+			echo $form->datePickerGroup(
+                $model,
+                'fechaingreso',
+                
+                array(                    
+                    'wrapperHtmlOptions' => array('class' => 'col-sm-5'),  
+					'widgetOptions'=>array(	
+						'options' => array(
+								'language' => 'es',
+								'format' => 'yyyy-mm-dd',
+								'viewformat' => 'yyyy-mm-dd',
+						),
+					),
+                    'hint' => 'Ingresa la fecha de ingreso',
+                    'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
+                )
+            );
+
+		 ?>
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'cons',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+				'hint' => ''
+			)
+		); ?>
+
+	</fieldset>
+ 
+	<div class="form-actions">
+		<?php $this->widget(
+			'booster.widgets.TbButton',
+			array(
+				'buttonType' => 'submit',
+				'context' => 'primary',
+				'label' => 'Crear'
+			)
+		); ?>
+		<?php $this->widget(
+			'booster.widgets.TbButton',
+			array('buttonType' => 'reset', 'label' => 'Limpiar')
+		); ?>
 	</div>
+<?php
+$this->endWidget();
+unset($form);
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'material'); ?>
-		<?php echo $form->textField($model,'material'); ?>
-		<?php echo $form->error($model,'material'); ?>
-	</div>
+?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'isbn'); ?>
-		<?php echo $form->textField($model,'isbn'); ?>
-		<?php echo $form->error($model,'isbn'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'issn'); ?>
-		<?php echo $form->textField($model,'issn'); ?>
-		<?php echo $form->error($model,'issn'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'idioma'); ?>
-		<?php echo $form->textField($model,'idioma'); ?>
-		<?php echo $form->error($model,'idioma'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'clave'); ?>
-		<?php echo $form->textField($model,'clave'); ?>
-		<?php echo $form->error($model,'clave'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo'); ?>
-		<?php echo $form->error($model,'titulo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'autor_personal'); ?>
-		<?php echo $form->textField($model,'autor_personal'); ?>
-		<?php echo $form->error($model,'autor_personal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'autor_corporativo'); ?>
-		<?php echo $form->textField($model,'autor_corporativo'); ?>
-		<?php echo $form->error($model,'autor_corporativo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'edicion'); ?>
-		<?php echo $form->textField($model,'edicion'); ?>
-		<?php echo $form->error($model,'edicion'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'pie_imp'); ?>
-		<?php echo $form->textField($model,'pie_imp'); ?>
-		<?php echo $form->error($model,'pie_imp'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion_fisica'); ?>
-		<?php echo $form->textField($model,'descripcion_fisica'); ?>
-		<?php echo $form->error($model,'descripcion_fisica'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'serie'); ?>
-		<?php echo $form->textField($model,'serie'); ?>
-		<?php echo $form->error($model,'serie'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'nota'); ?>
-		<?php echo $form->textField($model,'nota'); ?>
-		<?php echo $form->error($model,'nota'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'descripcion_area'); ?>
-		<?php echo $form->textField($model,'descripcion_area'); ?>
-		<?php echo $form->error($model,'descripcion_area'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fondo'); ?>
-		<?php echo $form->textField($model,'fondo'); ?>
-		<?php echo $form->error($model,'fondo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'resumen'); ?>
-		<?php echo $form->textField($model,'resumen'); ?>
-		<?php echo $form->error($model,'resumen'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'acento'); ?>
-		<?php echo $form->textField($model,'acento'); ?>
-		<?php echo $form->error($model,'acento'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'referencia'); ?>
-		<?php echo $form->textField($model,'referencia'); ?>
-		<?php echo $form->error($model,'referencia'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'dificultad'); ?>
-		<?php echo $form->textField($model,'dificultad'); ?>
-		<?php echo $form->error($model,'dificultad'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'cata'); ?>
-		<?php echo $form->textField($model,'cata'); ?>
-		<?php echo $form->error($model,'cata'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fechaingreso'); ?>
-		<?php echo $form->textField($model,'fechaingreso'); ?>
-		<?php echo $form->error($model,'fechaingreso'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'cons'); ?>
-		<?php echo $form->textField($model,'cons'); ?>
-		<?php echo $form->error($model,'cons'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
 
 </div><!-- form -->

@@ -47,8 +47,8 @@ class Acervo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idacervo', 'required'),
-			array('idacervo, material, idioma, acento', 'numerical', 'integerOnly'=>true),
+			array('fechaingreso, acento, dificultad, autor_personal, idioma, material,isbn,titulo', 'required'),
+			array('material, idioma, acento', 'numerical', 'integerOnly'=>true),
 			array('isbn, issn, clave, titulo, autor_personal, autor_corporativo, edicion, pie_imp, descripcion_fisica, serie, nota, descripcion_area, fondo, resumen, referencia, dificultad, cata, fechaingreso, cons', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -65,6 +65,7 @@ class Acervo extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idiomas' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
+			'materiales' => array(self::BELONGS_TO, 'Material', 'material'),
 		);
 	}
 
@@ -81,14 +82,14 @@ class Acervo extends CActiveRecord
 			'idioma' => 'Idioma',
 			'clave' => 'Clave',
 			'titulo' => 'Titulo',
-			'autor_personal' => 'Autor Personal',
+			'autor_personal' => 'Autor',
 			'autor_corporativo' => 'Autor Corporativo',
 			'edicion' => 'Edición',
 			'pie_imp' => 'Pie de imprenta',
 			'descripcion_fisica' => 'Descripción Fisica',
 			'serie' => 'Serie',
 			'nota' => 'Nota',
-			'descripcion_area' => 'Descripción de µrea',
+			'descripcion_area' => 'Descripción de área',
 			'fondo' => 'Fondo',
 			'resumen' => 'Resumen',
 			'acento' => 'Acento',
@@ -125,7 +126,7 @@ class Acervo extends CActiveRecord
 		$criteria->compare('material',$this->material);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('issn',$this->issn,true);
-		#$criteria->compare('idioma',$this->idioma);
+		$criteria->compare('idioma',$this->idioma);
 		$criteria->compare('idiomas.nombre',$this->idioma_search,true);
 		$criteria->compare('clave',$this->clave,true);
 		$criteria->compare('titulo',$this->titulo,true);
@@ -155,7 +156,7 @@ class Acervo extends CActiveRecord
 								'desc'=>'idiomas.nombre DESC',
 							),
 						),
-                        #'defaultOrder'=>'idaprendiente DESC',						
+                        'defaultOrder'=>'idacervo DESC',						
                     ),
 			'pagination'=>array('pageSize'=>10),
 

@@ -32,17 +32,17 @@ class AsistenciaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2'),
+				'actions'=>array('index','view', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
 				'roles'=>array('admin'),
 				#'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2'),
+				'actions'=>array('create','update', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
 				'roles'=>array('admin'),
 				#'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente', 'asistencia', 'aprendiente2','aprendiente2create'),
+				'actions'=>array('admin','delete', 'validarCodigoAprendiente', 'consultaAprendiente', 'createAprendiente'),
 				'roles'=>array('admin'),
 				#'users'=>array('admin'),
 			),
@@ -62,14 +62,9 @@ class AsistenciaController extends Controller
 		$this->redirect('../asistencia/aprendiente2/admin');
 	}
 
-	public function actionAsistencia()
+	public function actionAsistenciaUpdate()
 	{
-		$this->redirect('../../asistencia/admin');
-	}
-
-	public function actionAprendiente2()
-	{
-		$this->redirect('../../aprendiente2/admin');
+		$this->redirect('../../../admin');
 	}	
 
 	
@@ -92,9 +87,9 @@ class AsistenciaController extends Controller
 
 	public function actionCreate()
 	{
-		$model=new Asistencia;
+  		$model=new Asistencia;
 		$this->performAjaxValidation($model);
-		if(isset($_POST['Asistencia']))
+		if(isset($_POST['Asistencia']) && $_POST['Asistencia']['idaprendiente'] != "")		
 		{
 			#$model->attributes=$_POST['Asistencia'];
 			$model->idaprendiente = $_POST['Asistencia']['idaprendiente'];
@@ -201,6 +196,8 @@ class AsistenciaController extends Controller
 	 */
 	public function actionIndex()
 	{
+
+
 		$dataProvider=new CActiveDataProvider('Asistencia');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,

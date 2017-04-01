@@ -7,8 +7,8 @@ class AcervoController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	#public $layout='//layouts/column2';
-	public $layout='//layouts/main';	
-	
+#	public $layout='//layouts/main';	
+	public $layout='//layouts/lefty';	
 
 	/**
 	 * @return array action filters
@@ -30,17 +30,17 @@ class AcervoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','copiar', 'viewc'),
 				#'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'copiar', 'viewc'),
 				#'users'=>array('@'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'copiar', 'viewc'),
 				#'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -62,6 +62,18 @@ class AcervoController extends Controller
 	}
 
 	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionViewc($id)
+	{
+		$this->render('viewc',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+
+	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
@@ -74,12 +86,83 @@ class AcervoController extends Controller
 
 		if(isset($_POST['Acervo']))
 		{
+			$criteria = new CDbCriteria();
+			$criteria -> limit = 1;
+			$criteria -> order = "idacervo DESC";
+			
+			foreach (Acervo::model()->findAll($criteria) as $acervo => $value) {
+ 			    $idacervo = $value->idacervo;
+			}
+			
+			$idacervo=$idacervo+1;	
+			$model->idacervo = $idacervo; //agregamos el valor siguiente del ultimo acervo al modelo Acervo
 			$model->attributes=$_POST['Acervo'];
+			/*
+			echo $idacervo."<br>";
+			echo "<pre>";					
+			print_r($model);
+			echo "</pre>";			
+			Yii::app()->end();
+			*/
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idacervo));
 		}
 
 		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionCopiar($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Acervo']))
+		{
+			$criteria = new CDbCriteria();
+			$criteria -> limit = 1;
+			$criteria -> order = "idacervo DESC";
+			
+			foreach (Acervo::model()->findAll($criteria) as $acervo => $value) {
+ 			    $idacervo = $value->idacervo;
+			}
+			
+			$idacervo=$idacervo+1;	
+			$model->idacervo = $idacervo; //agregamos el valor siguiente del ultimo acervo al modelo Acervo
+			$model->attributes=$_POST['Acervo'];
+
+			if(!$model->isNewRecord)
+			{	
+				$model = new Acervo(); 
+				$criteria2 = new CDbCriteria();
+				$criteria2 -> limit = 1;
+				$criteria2 -> order = "idacervo DESC";
+			
+				foreach (Acervo::model()->findAll($criteria2) as $acervo => $value) {
+ 			    	$idacervo = $value->idacervo;
+				}
+			
+				$idacervo=$idacervo+1;	
+				$model->idacervo = $idacervo; //agregamos el valor siguiente del ultimo acervo al modelo Acervo
+				$model->attributes=$_POST['Acervo'];
+				if($model->save())
+					$this->redirect(array('viewc','id'=>$model->idacervo));
+			}				
+			/*
+			echo $idacervo."<br>";
+			echo "<pre>";					
+			print_r($model);
+			echo "</pre>";			
+			Yii::app()->end();
+			*/
+			
+			#if($model->insert())
+			#	$this->redirect(array('viewc','id'=>$model->idacervo));
+		}
+		$this->render('copiar',array(
 			'model'=>$model,
 		));
 	}

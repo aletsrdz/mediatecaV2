@@ -116,6 +116,7 @@ class ClientesController extends Controller
 	public function actionDelete($id){
 		$model = Clientes::model()->findByPk($id);
 		$model -> delete();
+		Yii::app()->authManager->revoke($model -> tipo, $model-> id);
 		$this->redirect(array('index'));
 	}
 	
@@ -125,12 +126,8 @@ class ClientesController extends Controller
 		
 		if(isset($_POST['Clientes']))	
 		{
-			/*
-			echo '<pre>';
-			print_r($_POST);
-			echo '</pre>';
-			Yii::app()->end();
-			*/
+			
+			
 			//$model -> attributes = $_POST['Clientes']; 
 			$model -> username = $_POST['Clientes']['username'];
 			$model -> password = $_POST['Clientes']['password'];
@@ -139,8 +136,18 @@ class ClientesController extends Controller
 			$model -> amaterno = $_POST['Clientes']['amaterno'];
 			$model -> email = $_POST['Clientes']['email'];
 			$model -> tipo = $_POST['Clientes']['tipo'];
+
+
 			if($model -> save())
-			{				
+			{								
+
+				$criteria = new CDbCriteria();			
+				$criteria->select = 'id';
+				$criteria->condition= 'username=:username';
+				$criteria->params = array(':username' => $model -> username);
+				$cliente = Clientes::model()->find($criteria);
+
+				Yii::app()->authManager->assign($model -> tipo, $cliente-> id);				
 				$this->redirect(array('view', 'id'=>$model->id));				
 			}						
 		}	

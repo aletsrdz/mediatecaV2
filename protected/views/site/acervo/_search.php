@@ -18,9 +18,30 @@ $form = $this->beginWidget(
 ); ?>
  
 	<fieldset>
+		<legend>Búsqueda</legend>
  
-		
- 
+		<?php
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "idmaterial ASC";
+			echo $form->dropDownListGroup(
+                $model,
+                'material',
+                array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+	   			'widgetOptions' => array(
+				
+					'data' => CHtml::listData(Material::model()->findAll($Criteria),"idmaterial" ,"SelectMaterial"),	   				
+					'htmlOptions' => array(
+						'empty'=>'Seleccione Material',
+						//'multiple' => true
+					),
+				)
+			)
+            ); 
+         ?> 		
+ <!--
 		<?php echo $form->textFieldGroup(
 			$model,
 			'material',
@@ -31,7 +52,8 @@ $form = $this->beginWidget(
 				'hint' => ''
 			)
 		); ?>
-		
+-->		
+		<!--
 		<?php echo $form->textFieldGroup(
 			$model,
 			'idioma',
@@ -42,6 +64,31 @@ $form = $this->beginWidget(
 				'hint' => ''
 			)
 		); ?>
+		-->
+
+		<?php
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "ididioma ASC";
+			echo $form->dropDownListGroup(
+                $model,
+                'idioma',
+                array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-5',
+				),
+	   			'widgetOptions' => array(
+				
+					'data' => CHtml::listData(Idioma::model()->findAll($Criteria),"ididioma" ,"SelectIdioma"),	   				
+					'htmlOptions' => array(
+						'empty'=>'Seleccione Idioma',
+						//'multiple' => true
+					),
+				)
+			)
+            ); 
+         ?>   
+
+
 
 		<?php echo $form->textFieldGroup(
 			$model,

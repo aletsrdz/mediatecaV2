@@ -13,6 +13,9 @@ $this->menu=array(
 );
 ?>
 
+
+
+
 <h1>Registrar Asistencia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

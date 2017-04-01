@@ -17,6 +17,8 @@
 ); ?>
  
 	<fieldset>
+
+		<legend>Crear Aprendiente</legend>
  
 		<?php #echo $form->labelEx($model,'persona_id'); ?>
  

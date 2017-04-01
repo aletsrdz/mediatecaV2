@@ -13,6 +13,4 @@ $this->menu=array(
 );
 ?>
 
-<h1>Crear Aprendiente</h1>
-
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

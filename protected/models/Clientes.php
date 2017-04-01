@@ -10,6 +10,21 @@ class Clientes extends CActiveRecord
 	{
 		return 'clientes';
 	}
+
+	public function attributeLabels()
+	{
+		return array(
+			'id' => 'No.',
+			'username' => 'Nombre de usuario',
+			'password' => 'Password',
+			'nombre' => 'Nombre',
+			'apaterno' => 'Apeido paterno',
+			'amaterno' => 'Apeido materno',
+			'email' => 'Correo electrónico',
+			'tipo' => 'Tipo de usuario',
+			
+		);
+	}
 	
 	public function rules(){
 		return array(
