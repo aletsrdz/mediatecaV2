@@ -32,17 +32,17 @@ class Aprendiente2Controller extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial', 'asistencia'),
+				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial', 'asistencia', 'selcredapre', 'getvalue'),
 				#'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial', 'asistencia'),
+				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'selcredapre', 'getvalue'),
 				#'users'=>array('@'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial', 'asistencia'),
+				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'selcredapre','getvalue'),
 				#'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -126,6 +126,51 @@ class Aprendiente2Controller extends Controller
 		
 		$this->render('credencial',array("bruce"=>$bruce));
 		
+	}
+
+
+
+	public function actionSelcredapre()
+	{		
+       	var_dump($_POST);
+		
+       	if(isset($_POST['theIds']))
+		{
+			$miVariable = $_POST["theIds"];
+			echo $miVariable;
+       		$arra=explode(',', $miVariable);
+       		echo "<pre>";
+        	echo print_r($arra);
+	        echo "</pre>";
+    		Yii::app()->end();
+    	}
+    	Yii::app()->end();
+    	$this->redirect('admin');
+    		
+	}
+
+	public function actionGetValue()
+	{
+
+		if(isset($_COOKIE["var"]))
+		{	
+			$miVariable = $_COOKIE["var"];
+			echo $miVariable;
+   			$arra=explode(',', $miVariable);	
+   			echo "<pre>";
+    		echo print_r($arra);
+        	echo "</pre>";
+			Yii::app()->end();
+		}		
+		echo "<script language='javascript'>"; 
+		echo "document.cookie = 'var=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'"; 
+		echo "</script>";
+		$this->redirect('admin');
+	}
+
+	public function actionAjaxUpdate()
+	{
+    	var_dump($_POST);
 	}
 	
 	public function actionSubdepByDep(){				
@@ -309,6 +354,13 @@ class Aprendiente2Controller extends Controller
 	 */
 	public function actionAdmin()
 	{
+		
+		$baseUrl = Yii::app()->baseUrl; 
+        echo $baseUrl."</br>";
+        $cs = Yii::app()->getClientScript();        
+        $cs->registerScriptFile($baseUrl.'../../js/checkedgrid.js');
+		
+
 		$model=new Aprendiente2('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Aprendiente2']))		

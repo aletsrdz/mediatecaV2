@@ -1,6 +1,6 @@
 <h1>Listado de Administradores</h1>
 
-<?php echo CHtml::link('Crear Administradores', array('add'));?>
+<?php echo CHtml::link('Agregar Administradores', array('add'));?>
 
 <!--
 <table>

@@ -257,16 +257,27 @@ $form = $this->beginWidget(
 			)
 		); ?>
 
-		<?php echo $form->textFieldGroup(
-			$model,
-			'cata',
-			array(
+		<?php
+			$Criteria = new CDbCriteria();
+			$Criteria -> order = "apaterno ASC";
+			echo $form->dropDownListGroup(
+                $model,
+                'cata',
+                array(
 				'wrapperHtmlOptions' => array(
 					'class' => 'col-sm-5',
 				),
-				'hint' => ''
+	   			'widgetOptions' => array(
+				
+					'data' => CHtml::listData(Clientes::model()->findAll($Criteria),"id" ,"SelectClientes"),	   				
+					'htmlOptions' => array(
+						'empty'=>'Seleccione un catalogador',
+						//'multiple' => true
+					),
+				)
 			)
-		); ?>
+            ); 
+         ?>
 
 		<?php 
 			echo $form->datePickerGroup(
@@ -289,16 +300,21 @@ $form = $this->beginWidget(
 
 		 ?>
 
-		<?php echo $form->textFieldGroup(
+		 <?php
+		echo $form->radioButtonListGroup(
 			$model,
 			'cons',
-			array(
-				'wrapperHtmlOptions' => array(
-					'class' => 'col-sm-5',
-				),
-				'hint' => ''
-			)
-		); ?>
+				array(
+					'widgetOptions' => array(
+						'data' => array(
+							'N','S',
+						),
+					'hint' => ''	
+					)
+				)
+			);
+		 ?>
+
 
 	</fieldset>
  
@@ -308,7 +324,7 @@ $form = $this->beginWidget(
 			array(
 				'buttonType' => 'submit',
 				'context' => 'primary',
-				'label' => 'Copiiiar'
+				'label' => 'Copiar'
 			)
 		); ?>
 		<?php $this->widget(

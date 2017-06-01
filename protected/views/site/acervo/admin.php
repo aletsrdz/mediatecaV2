@@ -58,14 +58,65 @@ or <b>=</b>) al principio de cada uno de los valores de búsqueda para especific
 		array('name' => 'material',
 			  'value' => '$data->materiales->descripcion', 
 		),
-		array('name' => 'isbn',
+		array('name' => 'clave',
+			'header'=>'Clasificación',	
 		),
-		array('name' => 'issn',
-		),	
         array(
-            'name'=>'idioma',            
-            'value' => '$data->idioma',                 
+            'name'=>'idioma_search',                                         
             'htmlOptions'=>array('style'=>'width: 30px; text-align: center;'),            
+            //'value' => '$data->idioma',
+            'value'=>function($data){
+        		if ($data->idioma  == 1){
+            		$language = 'Inglés';
+        		}
+        		else if ($data->idioma == 2){
+            		$language = 'Francés';
+        		}
+        		else if ($data->idioma == 3){
+            		$language = 'Italiano';
+        		}
+        		else if ($data->idioma == 4){
+            		$language = 'Alemán';
+        		}
+        		else if ($data->idioma == 5){
+            		$language = 'Portugués';
+        		}
+        		else if ($data->idioma == 6){
+            		$language = 'Chino';
+        		}
+        		else if ($data->idioma == 7){
+            		$language = 'Japonés';
+        		}
+        		else if ($data->idioma == 8){
+            		$language = 'Árabe';
+        		}
+        		else if ($data->idioma == 9){
+            		$language = 'Hebreo';
+        		}
+        		else if ($data->idioma == 10){
+            		$language = 'Griego Moderno';
+        		}
+        		else if ($data->idioma == 11){
+            		$language = 'Polaco';
+        		}
+        		else if ($data->idioma == 12){
+            		$language = 'Coreano';
+        		}
+        		else if ($data->idioma == 13){
+            		$language = 'Sueco';
+        		}
+        		else if ($data->idioma == 14){
+            		$language = 'Catalán';
+        		}
+        		else if ($data->idioma == 19){
+            		$language = 'Náhuatl';
+        		}
+        		else{
+            		$language = 'Indefinido';
+        		}
+        		return $language;
+        	},	
+        	
         ),
 		#'clave',		
 		array('name' => 'titulo',

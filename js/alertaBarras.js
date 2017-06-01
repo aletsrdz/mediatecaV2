@@ -1,16 +1,16 @@
 window.onload = function(){
 
 
-/*
 
-	$("#asistencia").click(function(){
-		var audio = new Audio('../sounds/tada.wav');
-		audio.play();				
-		//alert("presionaste Asistencia "+ audio);
+
+	$("#selectcredencial").click(function(){
+		
+		//var selected = $("#aprendiente2-grid").selGridView("getAllSelection");
+		alert("presionaste Credencial");
   		
 	});
 
-*/	
+
 
 	$("#codigo").change(function(){
 		var codigo = document.getElementById("codigo").value;
@@ -60,6 +60,8 @@ function sonidoJavaScript()
 	alert("EXITO");
 }
 
+var selected = $("#aprendiente2-grid").selGridView("getAllSelection");
+alert("Seleccion" + selected);
 
 	
 }//cierre de window.onload	

@@ -31,7 +31,7 @@ class Dependencia extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('dependencia, nombre, nomabrevia', 'required'),
+			array('dependencia, nombre, nomabrevia', 'required', 'message'=>'Campo Requerido'),
 			array('dependencia', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -57,7 +57,7 @@ class Dependencia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'dependencia' => 'Dependencia',
+			'dependencia' => 'No. Dependencia',
 			'nombre' => 'Nombre',
 			'nomabrevia' => 'Abreviatura',
 		);
@@ -87,6 +87,10 @@ class Dependencia extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'dependencia ASC',
+				),
+			'pagination'=>array('pageSize'=>15),			
 		));
 	}
 

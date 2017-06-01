@@ -7,6 +7,8 @@ $this->breadcrumbs=array(
 	'Consulta',
 );
 
+
+
 $this->menu=array(
 	array('label'=>'List Aprendiente2', 'url'=>array('index')),
 	array('label'=>'Create Aprendiente2', 'url'=>array('create')),
@@ -23,8 +25,12 @@ $('.search-form form').submit(function(){
 	});
 	return false;
 });
+
 ");
 ?>
+
+<?php echo CHtml::link('Link Text',array('aprendiente2/selcredapre',
+                                         'theIds'=>'145287')); ?>
 
 <h1>Consultar Aprendientes</h1>
 <!--
@@ -40,18 +46,80 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+<br>
+
+<?php $this->widget(
+    'booster.widgets.TbButton',
+    array(
+    	'buttonType' =>'ajaxSubmitButton',
+        'label' => 'Generar más de 2 Credenciales',
+        'context' => 'primary',        
+        'url' => Yii::app()->createUrl("aprendiente2/selcredapre"),        
+        //'url' => Yii::app()->createUrl("aprendiente2/getvalue"),        
+        'htmlOptions' => array(      
+        	'id'=>"selectcredencial",        	
+			'onclick'=>'js:obtenerId()'
+        )	
+
+    )
+); echo ' ';
+?>
+
+<br>
+
+
+
+
+
+<?php /* $this->widget(
+    'booster.widgets.TbButton',
+    array(
+    	'buttonType' =>'ajaxLink',
+        'label' => 'Ajax Boton',
+        'context' => 'primary',      
+        'url' => Yii::app()->createUrl("aprendiente2/selcredapre"),
+        'ajaxOptions' => array(       	         
+        	'type'=>'POST',        	
+        	'dataType'=> 'json',
+            'data' => 'js:{theIds : $.fn.yiiGridView.getChecked("aprendiente2-grid","selectedIds").toString()}',    	
+            'success' => 'js:function(data){ $.fn.yiiGridView.update("aprendiente2-grid")  }',
+
+        	),
+        'htmlOptions' => array(      
+        	'href' => Yii::app()->createUrl( 'aprendiente2/selcredapre' ),
+        	'id'=>"selectcredencial",        				
+        )	
+
+    )
+); echo ' ';
+*/
+?>
+
+<br>
+
+<div id="output"></div>
+
+
 
 <?php 
 	
-	
+	#$this->widget('ext.selgridview.SelGridView', array(
 	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'aprendiente2-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->search(),	
+	#'selectionChanged'=>'userClicks',	
 	'emptyText' => 'NO SE ENCONTRARÓN RESULTADOS',
 	'summaryText' => 'Mostrar {start} - {end} de {count}',
 	'pager' => array('class' => 'CLinkPager', 'header' => 'Ir a página:', 'nextPageLabel'=>"Siguiente", 'prevPageLabel'=>'Anterior'),
 	'filter'=>$model,
 	'columns'=>array(
+		array(
+            'name' => 'check',
+            'id' => 'selectedIds',
+            'selectableRows' => 2,
+            'class' => 'CCheckBoxColumn',            
+            #'value'=> '$data->idaprendiente',
+        ),
 		array(
             'name'=>'idaprendiente',
             'header'=>'No.',

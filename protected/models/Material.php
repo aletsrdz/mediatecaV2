@@ -25,7 +25,7 @@ class Material extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idmaterial, descripcion', 'required'),
+			array('descripcion', 'required', 'message'=>'Campo Requerido'),
 			array('idmaterial', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -51,7 +51,7 @@ class Material extends CActiveRecord
 	{
 		return array(
 			'idmaterial' => 'No Material',
-			'descripcion' => 'Descripci¢n',
+			'descripcion' => 'Descripción',
 		);
 	}
 
@@ -78,6 +78,10 @@ class Material extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'idmaterial ASC',
+			),
+			'pagination'=>array('pageSize'=>15),
 		));
 	}
 

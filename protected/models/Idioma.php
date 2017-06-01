@@ -25,7 +25,7 @@ class Idioma extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ididioma', 'required'),
+			array('nombre', 'required', 'message'=>'Campo Requerido'),
 			array('ididioma', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'safe'),
 			// The following rule is used by search().
@@ -81,6 +81,10 @@ class Idioma extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'ididioma ASC',
+				),
+			'pagination'=>array('pageSize'=>15),
 		));
 	}
 

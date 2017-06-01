@@ -38,8 +38,10 @@ public function actionIndex()
 		*/
 		$model=new Acervo('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->cons = 'S'; // para que me aparescan solo la información pública del acervo, 
 		if(isset($_GET['Acervo']))
 			$model->attributes=$_GET['Acervo'];
+
 
 		$this->render('acervo/admin',array(
 			'model'=>$model,

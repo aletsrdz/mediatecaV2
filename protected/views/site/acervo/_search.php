@@ -40,7 +40,18 @@ $form = $this->beginWidget(
 				)
 			)
             ); 
-         ?> 		
+         ?> 
+
+		<?php echo $form->textFieldGroup(
+			$model,
+			'clave',
+			array(
+				'wrapperHtmlOptions' => array(
+					'class' => 'col-sm-20',
+				),
+				'hint' => ''
+			)
+		);?>         		
  <!--
 		<?php echo $form->textFieldGroup(
 			$model,
@@ -109,8 +120,11 @@ $form = $this->beginWidget(
 				),
 				'hint' => ''
 			)
-		); ?>	
-		
+		); ?>
+
+			
+
+				
 		
 <div class="form-actions">
 		<?php $this->widget(

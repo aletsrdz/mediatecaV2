@@ -47,7 +47,7 @@ class Acervo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fechaingreso, acento, dificultad, autor_personal, idioma, material,isbn,titulo', 'required'),
+			array('fechaingreso, cata, autor_personal, idioma, material,titulo', 'required'),
 			array('material, idioma, acento', 'numerical', 'integerOnly'=>true),
 			array('isbn, issn, clave, titulo, autor_personal, autor_corporativo, edicion, pie_imp, descripcion_fisica, serie, nota, descripcion_area, fondo, resumen, referencia, dificultad, cata, fechaingreso, cons', 'safe'),
 			// The following rule is used by search().
@@ -63,8 +63,8 @@ class Acervo extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-			'idiomas' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
+		return array(			
+			'idiomass' => array(self::BELONGS_TO, 'Idioma', 'idioma'),
 			'materiales' => array(self::BELONGS_TO, 'Material', 'material'),
 		);
 	}
@@ -75,12 +75,12 @@ class Acervo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idacervo' => 'No Acervo',
+			'idacervo' => 'No Adquisición',
 			'material' => 'Material',
 			'isbn' => 'ISBN',
 			'issn' => 'ISSN',
 			'idioma' => 'Idioma',
-			'clave' => 'Clave',
+			'clave' => 'Clasificación',
 			'titulo' => 'Titulo',
 			'autor_personal' => 'Autor',
 			'autor_corporativo' => 'Autor Corporativo',
@@ -95,9 +95,9 @@ class Acervo extends CActiveRecord
 			'acento' => 'Acento',
 			'referencia' => 'Referencia',
 			'dificultad' => 'Dificultad',
-			'cata' => 'Cata',
+			'cata' => 'Catalogador',
 			'fechaingreso' => 'Fecha de Ingreso',
-			'cons' => 'Cons',
+			'cons' => 'Consulta privada(N) o pública(S)',
 			'idioma_search'=>'Idioma',
 		);
 	}
@@ -120,14 +120,14 @@ class Acervo extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		$sort = new CSort();
-		$criteria->with = array('idiomas');
+		$criteria->with = array('idiomass');
 
-		$criteria->compare('idacervo',$this->idacervo);
-		$criteria->compare('material',$this->material);
+		$criteria->compare('idacervo',$this->idacervo, false); //false para la busqueda sea exactamente como la escribieron
+		$criteria->compare('material',$this->material,false);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('issn',$this->issn,true);
-		$criteria->compare('idioma',$this->idioma);
-		$criteria->compare('idiomas.nombre',$this->idioma_search,true);
+		$criteria->compare('idioma',$this->idioma, false);
+		$criteria->compare('idiomass.nombre',$this->idioma_search,false);
 		$criteria->compare('clave',$this->clave,true);
 		$criteria->compare('titulo',$this->titulo,true);
 		$criteria->compare('autor_personal',$this->autor_personal,true);
@@ -140,20 +140,23 @@ class Acervo extends CActiveRecord
 		$criteria->compare('descripcion_area',$this->descripcion_area,true);
 		$criteria->compare('fondo',$this->fondo,true);
 		$criteria->compare('resumen',$this->resumen,true);
-		$criteria->compare('acento',$this->acento);
+		$criteria->compare('acento',$this->acento, false);
 		$criteria->compare('referencia',$this->referencia,true);
 		$criteria->compare('dificultad',$this->dificultad,true);
 		$criteria->compare('cata',$this->cata,true);
 		$criteria->compare('fechaingreso',$this->fechaingreso,true);
-		$criteria->compare('cons',$this->cons,true);
+		$criteria->compare('cons',$this->cons,false);
+		
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+
 						'sort'=>array(
 						'attributes'=>array(							
 							'idioma_search'=>array(
-								'asc'=>'idiomas.nombre ASC',
-								'desc'=>'idiomas.nombre DESC',
+								'asc'=>'idiomass.nombre ASC',
+								'desc'=>'idiomass.nombre DESC',
 							),
 						),
                         'defaultOrder'=>'idacervo DESC',						
@@ -173,4 +176,6 @@ class Acervo extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	
 }

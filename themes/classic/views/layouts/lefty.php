@@ -17,6 +17,18 @@
 							  'url'=> array('/clientes/index'),
                                'visible'=>Yii::app()->user->checkAccess("super")
                              ),
+                        array('label' => 'Idiomas',                              
+                              'url'=> array('/idioma/admin'),
+                               'visible'=>Yii::app()->user->checkAccess("super")
+                             ),
+                        array('label' => 'Materiales',                              
+                              'url'=> array('/material/admin'),
+                               'visible'=>Yii::app()->user->checkAccess("super")
+                             ),
+                        array('label' => 'Dependencias',                              
+                              'url'=> array('/dependencia/admin'),
+                               'visible'=>Yii::app()->user->checkAccess("super")
+                             ),                        
                         '',
                         array(
                             'label' => 'Aprendientes', 'visible'=>Yii::app()->user->checkAccess("asist"),

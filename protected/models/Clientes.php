@@ -32,6 +32,11 @@ class Clientes extends CActiveRecord
 		);
 		
 	}
+
+	public function getSelectClientes(){
+		return $this->nombre." ".$this->apaterno." ".$this->amaterno; 
+		
+	}	
 	
 	
 }
