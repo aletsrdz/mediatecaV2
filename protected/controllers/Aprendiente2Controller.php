@@ -32,17 +32,17 @@ class Aprendiente2Controller extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial', 'asistencia', 'selcredapre', 'getvalue'),
+				'actions'=>array('index','view','generarCredencial','reinscripcion', 'credencial', 'asistencia', 'variascredenciales', 'generarCredenciales'),
 				#'users'=>array('*'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'selcredapre', 'getvalue'),
+				'actions'=>array('create','update','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'variascredenciales', 'generarCredenciales'),
 				#'users'=>array('@'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'selcredapre','getvalue'),
+				'actions'=>array('admin','delete','generarCredencial', 'reinscripcion', 'credencial', 'asistencia', 'variascredenciales', 'generarCredenciales'),
 				#'users'=>array('admin'),
 				'roles'=>array('admin'),
 			),
@@ -73,8 +73,7 @@ class Aprendiente2Controller extends Controller
 	}
 	
 	public function actionGenerarCredencial($id = null, $nombre= null, $idioma= null)
-	{
-		
+	{				
 		//$idioma = "JAPONÉS";
 		$imageCele = Yii::getPathOfAlias("webroot.images.cele1");
 		$imageUnam = Yii::getPathOfAlias("webroot.images.unam150");
@@ -83,7 +82,7 @@ class Aprendiente2Controller extends Controller
 			
 		$pdf = new Code39();
 		$pdf->AddPage();
-		$pdf->f_Code39(123, 45, $id);
+		$pdf->f_Code39(123, 45, $id);			
 		$pdf->Rect(21,7,83, 23); //cabecera izq
 		$pdf->Rect(107,7,83, 23); //firma
 		$pdf->Image($imageUnam.".jpg",25,10,-400);		
@@ -108,66 +107,135 @@ class Aprendiente2Controller extends Controller
 		$pdf->Rect(57,52,47, 20); // Idioma e ID usuario
 		$pdf->SetXY(130,33);
 		$pdf->SetFont('Arial','',6);
-		$pdf->MultiCell(40,3,'El usurio será responsable del mal uso que se ahga de esta credencial', 0, 'C');
+		$pdf->MultiCell(40,3,'El usuario será responsable del mal uso que se ahga de esta credencial', 0, 'C');
 		$pdf->SetXY(61,33);
 		$pdf->SetFont('Arial','',8);
-		$pdf->MultiCell(40,5,$nombre, 0, 'C');
+		$pdf->MultiCell(40,5,$nombre, 0, 'C');		
 		$pdf->SetXY(61,45);
 		$pdf->Cell(40,4, 'Nombre',0,0,'C');
 		$pdf->SetXY(61,53);
-		$pdf->Cell(40,5, $idioma,0,0,'C');
+		$pdf->Cell(40,5, $idioma,0,0,'C');		
 		$pdf->SetXY(61,59);
 		$pdf->SetFont('Arial','',8);
 		$pdf->Cell(40,5, 'Idioma',0,0,'C');
 		$pdf->SetXY(61,66);
 		$pdf->Cell(15,5, 'ID. de Usr:',0,0,'C');
-		$pdf->Cell(25,5, $id,0,0,'C');
+		$pdf->Cell(25,5, $id,0,0,'C');				
 		$pdf->Output();
-		
-		$this->render('credencial',array("bruce"=>$bruce));
-		
-	}
+	
+		$this->render('credencial');
+	}	
+	
 
-
-
-	public function actionSelcredapre()
-	{		
-       	var_dump($_POST);
-		
-       	if(isset($_POST['theIds']))
-		{
-			$miVariable = $_POST["theIds"];
-			echo $miVariable;
-       		$arra=explode(',', $miVariable);
-       		echo "<pre>";
-        	echo print_r($arra);
-	        echo "</pre>";
-    		Yii::app()->end();
-    	}
-    	Yii::app()->end();
-    	$this->redirect('admin');
-    		
-	}
-
-	public function actionGetValue()
+	public function actionVariascredenciales()
 	{
+		
+		if(isset($_POST['theIds']))
+		{
+        	$test=explode( ',', $_POST['theIds']);
+        	
+		}
+		else{
+        	$test = "Ajax failed, no se pudo generar la credencial";
+    	}
 
-		if(isset($_COOKIE["var"]))
-		{	
-			$miVariable = $_COOKIE["var"];
-			echo $miVariable;
-   			$arra=explode(',', $miVariable);	
-   			echo "<pre>";
-    		echo print_r($arra);
-        	echo "</pre>";
-			Yii::app()->end();
-		}		
-		echo "<script language='javascript'>"; 
-		echo "document.cookie = 'var=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'"; 
-		echo "</script>";
-		$this->redirect('admin');
+    	//var_dump($test)."</br>";
+    	$i=-1;
+
+
+    	foreach($test as $ids)
+    	{
+    		$i++;    		
+    		$model['$i']=$this->loadModel($ids);
+    		 $apr = $model['$i']->idaprendiente;
+    		 $nom = $model['$i']->nombre;
+    		 $idi = $model['$i']->idioma;
+    		//echo "<br>";   		
+
+    		$usuario[]=$apr.",".$nom.",".$idi;
+    		
+    		
+    	}
+    	var_dump($usuario); 
+    	
+    	
+    	/*
+    	echo "</br>";
+    	echo '<pre>';
+		print_r($prueba);
+		echo '</pre>';
+    	//var_dump($prueba);
+    	*/
+	    Yii::app()->end();
+
 	}
 
+	public function actionGenerarCredenciales()
+	{			
+	$imageCele = Yii::getPathOfAlias("webroot.images.cele1");
+	$imageUnam = Yii::getPathOfAlias("webroot.images.unam150");
+	Yii::import("ext.fpdf.*");
+	$pdf = new Code39();
+	$pdf->AddPage();
+	$test=explode( ',', $_GET['theIds']);
+	$i=-1;
+	$ln=0;
+	foreach($test as $ids)
+	{			
+		$i++;    		
+    	$model['$i']=$this->loadModel($ids);
+    	$apr = (int)$model['$i']->idaprendiente;
+  		$nom = $model['$i']->nombre;
+   		$idi = $model['$i']->idioma;
+	    //$pdf->f_Code39(123, 45, $id);		
+
+		$pdf->f_Code39(123, 45+$ln, "$apr");	
+		$pdf->Rect(21,7+$ln,83, 23); //cabecera izq
+		$pdf->Rect(107,7+$ln,83, 23); //firma
+		$pdf->Image($imageUnam.".jpg",25,10,-400);		
+		$pdf->Image($imageCele.".png",85,10,-300);
+		$pdf->SetFont('Arial','',7);
+		$pdf->SetXY(40,10+$ln);
+		$pdf->MultiCell(45,3,'Universidad Nacional Autónoma de México', 0, 'C');
+		$pdf->SetXY(40,16+$ln);
+		$pdf->MultiCell(45,3,'Centro de Enseñanza de Lenguas Extranjeras', 0, 'C');
+		$pdf->SetXY(40,23+$ln);
+		$pdf->SetFont('Arial','',11);
+		$pdf->Cell(45,6, 'Mediateca',0,0,'C');
+		$pdf->SetXY(130+$ln,24+$ln);
+		$pdf->SetFont('Arial','B',8);
+		$pdf->Cell(40,5, 'Firma',0,0,'C');
+		$pdf->Line(117,23+$ln, 182, 23+$ln);
+		$pdf->Rect(20,6+$ln,85, 67); //Rect 1
+		$pdf->Rect(106,6+$ln,85, 67); // Rect2 codigo de barras 
+		$pdf->Rect(107,31+$ln,83, 41); // Rect interno codigo de barras
+		$pdf->Rect(21,31+$ln,35, 41); // Foto
+		$pdf->Rect(57,31+$ln,47, 20); // Nombre
+		$pdf->Rect(57,52+$ln,47, 20); // Idioma e ID usuario
+		$pdf->SetXY(130,33+$ln);
+		$pdf->SetFont('Arial','',6);
+		$pdf->MultiCell(40,3,'El usuario será responsable del mal uso que se ahga de esta credencial', 0, 'C');
+		$pdf->SetXY(61,33+$ln);
+		$pdf->SetFont('Arial','',8);		
+		$pdf->MultiCell(40,5,$nom, 0, 'C');
+		$pdf->SetXY(61,45+$ln);
+		$pdf->Cell(40,4, 'Nombre',0,0,'C');
+		$pdf->SetXY(61,53+$ln);		
+		$pdf->Cell(40,5,  $idi,0,0,'C');		
+		$pdf->SetXY(61,59+$ln);
+		$pdf->SetFont('Arial','',8);
+		$pdf->Cell(40,5, 'Idioma',0,0,'C');
+		$pdf->SetXY(61,66+$ln);
+		$pdf->Cell(15,5, 'ID. de Usr:',0,0,'C');		
+		$pdf->Cell(25,5, "$apr",0,0,'C');			
+		$pdf->Cell(0);
+		$ln = $ln+68;			
+		
+	}//cierre de foreach
+	$pdf->Output();
+	Yii::app()->end();
+	}
+	
 	public function actionAjaxUpdate()
 	{
     	var_dump($_POST);

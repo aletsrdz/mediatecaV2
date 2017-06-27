@@ -29,9 +29,6 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<?php echo CHtml::link('Link Text',array('aprendiente2/selcredapre',
-                                         'theIds'=>'145287')); ?>
-
 <h1>Consultar Aprendientes</h1>
 <!--
 <p>
@@ -48,52 +45,63 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 <br>
 
+
+
+<div id="output"></div>
+
+
 <?php $this->widget(
     'booster.widgets.TbButton',
     array(
-    	'buttonType' =>'ajaxSubmitButton',
+    	'buttonType' =>'ajaxLink',
         'label' => 'Generar más de 2 Credenciales',
         'context' => 'primary',        
         'url' => Yii::app()->createUrl("aprendiente2/selcredapre"),        
         //'url' => Yii::app()->createUrl("aprendiente2/getvalue"),        
         'htmlOptions' => array(      
         	'id'=>"selectcredencial",        	
-			'onclick'=>'js:obtenerId()'
+			'onclick'=>'js:obtenerId()',
+			'target' => '_blank',
         )	
 
     )
 ); echo ' ';
+?>
+
+
+<?php
+
+echo CHtml::ajaxLink("Imprimir Credenciales", $this->createUrl('aprendiente2/variascredenciales'),
+	array(
+        "type" => "POST",
+        "data" => 'js:{theIds : $.fn.yiiGridView.getChecked("aprendiente2-grid","selectedIds").toString()}',
+        "update" =>'#output',
+		'beforeSend' => 'js:function(){
+						 var selected = $.fn.yiiGridView.getChecked("aprendiente2-grid","selectedIds").toString();
+						 if(!selected.length > 0) {
+						alert("Selecciona al menos un registro");		
+						return false;
+						 }
+
+          				 var r = confirm("Quiere imprimir las credenciales seleccionadas?");
+  						 if(!r){
+  						 	return false;
+  						 }
+  						 window.open("http://localhost:8000/index.php/aprendiente2/generarCredenciales?theIds="+selected, "_blank");
+  						 
+       	}',
+        /*'success'=>"window.open('http://localhost:8000/index.php/aprendiente2/generarCredencial', '_blank');
+        			$('#aprendiente2-grid').yiiGridView.update('aprendiente2-grid')",        
+        */
+        ),
+	array(				
+    	'class' => 'btn btn-success',
+    )
+);
+
 ?>
 
 <br>
-
-
-
-
-
-<?php /* $this->widget(
-    'booster.widgets.TbButton',
-    array(
-    	'buttonType' =>'ajaxLink',
-        'label' => 'Ajax Boton',
-        'context' => 'primary',      
-        'url' => Yii::app()->createUrl("aprendiente2/selcredapre"),
-        'ajaxOptions' => array(       	         
-        	'type'=>'POST',        	
-        	'dataType'=> 'json',
-            'data' => 'js:{theIds : $.fn.yiiGridView.getChecked("aprendiente2-grid","selectedIds").toString()}',    	
-            'success' => 'js:function(data){ $.fn.yiiGridView.update("aprendiente2-grid")  }',
-
-        	),
-        'htmlOptions' => array(      
-        	'href' => Yii::app()->createUrl( 'aprendiente2/selcredapre' ),
-        	'id'=>"selectcredencial",        				
-        )	
-
-    )
-); echo ' ';
-*/
-?>
 
 <br>
 
@@ -115,9 +123,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		array(
             'name' => 'check',
+            'header'=>'Selecciona',
             'id' => 'selectedIds',
             'selectableRows' => 2,
-            'class' => 'CCheckBoxColumn',            
+            'class' => 'CCheckBoxColumn',    
+            'value' =>'$data->idaprendiente." ".$data->nombre." ".$data->idioma',         
             #'value'=> '$data->idaprendiente',
         ),
 		array(

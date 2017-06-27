@@ -94,19 +94,35 @@ $this->widget('zii.widgets.CDetailView', array(
 
 ?>
 
-<br>
-<!--
-<?php echo CHtml::link('Código de barras - PDF', array('generarCredencial', "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente), array('target'=>'_blank'));?>
--->
-</br>
+<?php
+
+	$arreglo=array("aprendiente"=>array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma),"aprendiente2"=>array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma), "aprendiente3"=>array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma), "aprendiente4"=>array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma));
+
+		$arr=array(
+			 array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma),
+			 array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma), 
+			 array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma),
+			 array("id"=>$model->idaprendiente, "nombre"=>$model->nombre, "idioma"=>$model->idioma)
+			 );
+
+	echo "<pre>";
+	print_r($arreglo);
+	echo "</pre>";
+
+	echo "<pre>";
+	print_r($arr);
+	echo "</pre>";
+
+?>
+
 <?php $this->widget(
     'booster.widgets.TbButton',
     array(
     	'buttonType' =>'link',
         'label' => 'Imprimir Credencial',
-        'context' => 'primary',
-        #'url' => 'array(generarCredencial, "nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente),',
-        'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', array("nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente)),        
+        'context' => 'primary',                
+        'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', array("nombre"=>$model->nombre, "idioma"=>$model->idioma, "id"=>$model->idaprendiente)),                
+        #'url' => Yii::app()->createUrl('aprendiente2/generarCredencial', $arreglo),        
         'htmlOptions' => array(        	
         	'target' => '_blank',
         	'onclick' => 'js:bootbox.alert("Se ha generado la credencial!")',          	

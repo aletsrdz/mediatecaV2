@@ -45,7 +45,8 @@
                             'itemOptions' => array('class' => 'nav-header')
                         ),
                         array('label' => 'Registrar', 'url' => '../acervo/create',  'visible'=>Yii::app()->user->checkAccess("admin")),
-                        array('label' => 'Busqueda', 'url' => '../acervo/admin',  'visible'=>Yii::app()->user->checkAccess("admin")),
+                        array('label' => 'Consulta', 'url' => '../acervo/admin',  'visible'=>Yii::app()->user->checkAccess("admin")),
+                        array('label' => 'Etiquetas', 'url' => '../acervo/etiquetas',  'visible'=>Yii::app()->user->checkAccess("admin")),
                     )
                 )
             );        

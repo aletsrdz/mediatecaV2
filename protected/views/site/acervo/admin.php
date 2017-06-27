@@ -28,7 +28,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1></h1>
+
 
 <p>
 Opcionalmente puede ingresar un operador de comparación (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -41,6 +41,8 @@ or <b>=</b>) al principio de cada uno de los valores de búsqueda para especific
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+
+<h1>Resutado de la busqueda ...</h1>
 
 <?php 
 	
